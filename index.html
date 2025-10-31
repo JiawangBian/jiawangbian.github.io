@@ -5,287 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jiawang Bian - Assistant Professor at NTU">
     <meta name="keywords" content="Jiawang Bian, Computer Vision, Machine Learning, NTU, Research">
-    <title>Jiawang Bian - NTU</title>
+    <title>Jiawang Bian</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css">
 </head>
 <body>
-    <!-- Left Sidebar -->
-    <aside class="sidebar">
-        <div class="sidebar-content">
-            <!-- Profile Image -->
-            <div class="profile-image">
-                <img src="profile.jpg" alt="Jiawang Bian" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22200%22 height=%22200%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2224%22%3EPhoto%3C/text%3E%3C/svg%3E'">
-            </div>
-
-            <!-- Name and Title -->
-            <h1 class="profile-name">Jiawang Bian</h1>
-            <p class="profile-title">Assistant Professor</p>
-            <p class="profile-affiliation">Nanyang Technological University</p>
-
-            <!-- Hiring Banner -->
-            <div class="hiring-banner">
-                <i class="fas fa-bullhorn"></i>
-                <strong>I'm Hiring!</strong>
-                <p>Looking for motivated PhD students and Postdocs</p>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:jiawang.bian@ntu.edu.sg">jiawang.bian@ntu.edu.sg</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Singapore</span>
-                </div>
-            </div>
-
-            <!-- Social Links -->
-            <div class="social-links">
-                <a href="#" title="Google Scholar" class="social-link">
-                    <i class="ai ai-google-scholar"></i>
-                </a>
-                <a href="#" title="GitHub" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" title="LinkedIn" class="social-link">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#" title="Twitter" class="social-link">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" title="ORCID" class="social-link">
-                    <i class="ai ai-orcid"></i>
-                </a>
-            </div>
-
-            <!-- CV Download -->
-            <a href="cv.pdf" class="cv-button" download>
-                <i class="fas fa-download"></i>
-                Download CV
-            </a>
-
-            <!-- Navigation Links -->
-            <nav class="sidebar-nav">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#news" class="nav-link">News</a>
-                <a href="#research" class="nav-link">Research</a>
-                <a href="#publications" class="nav-link">Publications</a>
-                <a href="#teaching" class="nav-link">Teaching</a>
-                <a href="#prospective" class="nav-link">Prospective Students</a>
-            </nav>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="container">
+            <div class="nav-brand">Jiawang Bian</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#group">Group</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+            </ul>
         </div>
-    </aside>
-
-    <!-- Mobile Header -->
-    <header class="mobile-header">
-        <div class="mobile-header-content">
-            <h1>Jiawang Bian</h1>
-            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+    </nav>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <div class="main-container">
         <!-- About Section -->
-        <section id="about" class="content-section">
-            <h2>About Me</h2>
-            <div class="section-content">
+        <section id="home" class="section-about">
+            <div class="about-grid">
+                <!-- Left: Photo -->
+                <div class="about-photo">
+                    <img src="profile.jpg" alt="Jiawang Bian" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22240%22%3E%3Crect fill=%22%23ddd%22 width=%22240%22 height=%22240%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2224%22%3EPhoto%3C/text%3E%3C/svg%3E'">
+                </div>
+
+                <!-- Right: Info (Two columns) -->
+                <div class="about-info">
+                    <!-- Left column: Basic info -->
+                    <div class="info-column">
+                        <h1>Jiawang Bian</h1>
+                        <p class="title">Assistant Professor</p>
+                        <p class="affiliation">College of Computing and Data Science<br>Nanyang Technological University</p>
+                        <p class="email">Email: jiawang.bian[at]ntu.edu.sg</p>
+
+                        <div class="social-icons">
+                            <a href="#" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Right column: Research Interests -->
+                    <div class="info-column">
+                        <h3>Research Interests:</h3>
+                        <ul class="interests-list">
+                            <li>Computer Vision</li>
+                            <li>3D Vision</li>
+                            <li>Machine Learning</li>
+                            <li>Robotics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bio paragraphs -->
+            <div class="bio">
                 <p>
-                    I am joining Nanyang Technological University (NTU) as an Assistant Professor in [Department/School Name].
+                    I am joining <a href="#">Nanyang Technological University (NTU)</a> as an Assistant Professor in the College of Computing and Data Science.
                     My research focuses on computer vision, machine learning, and their applications in robotics and autonomous systems.
                 </p>
                 <p>
-                    Prior to joining NTU, I [add your previous positions, postdoc experience, PhD institution, etc.].
-                    I received my PhD from [University Name] in [Year], where I worked on [brief research summary].
+                    Prior to joining NTU, I [add your previous positions, postdoc experience].
+                    I received my Ph.D. degree from <a href="#">[University Name]</a> in [Year], supervised by <a href="#">Prof. [Name]</a>.
+                    I obtained my Bachelor's degree from <a href="#">[University Name]</a> in [Year].
                 </p>
                 <p>
                     My research interests lie at the intersection of computer vision, deep learning, and 3D reconstruction.
                     I am particularly interested in developing robust and efficient algorithms for visual perception and scene understanding.
                 </p>
+
+                <h3>To prospective students:</h3>
+                <p>
+                    <strong>Application:</strong> If you are interested in joining my group at NTU, please drop me an email at jiawang.bian[at]ntu.edu.sg with your resume.
+                    Priority will be given to candidates with research experience in [your priority areas].
+                </p>
+                <p>
+                    Due to the volume of emails received, we regret that only shortlisted candidates will be contacted. Thanks for your understanding.
+                </p>
             </div>
         </section>
 
         <!-- News Section -->
-        <section id="news" class="content-section">
+        <section id="news" class="section-news">
             <h2>News</h2>
-            <div class="section-content">
-                <ul class="news-list">
-                    <li>
-                        <span class="news-date">2025-01</span>
-                        <span class="news-content">
-                            <strong>I will join NTU as an Assistant Professor!</strong> Looking for motivated PhD students and Postdocs.
-                        </span>
-                    </li>
-                    <li>
-                        <span class="news-date">2024-12</span>
-                        <span class="news-content">
-                            Paper accepted to [Conference Name]
-                        </span>
-                    </li>
-                    <li>
-                        <span class="news-date">2024-10</span>
-                        <span class="news-content">
-                            Invited talk at [Institution/Conference]
-                        </span>
-                    </li>
-                    <li>
-                        <span class="news-date">2024-09</span>
-                        <span class="news-content">
-                            Paper accepted to [Conference Name]
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Research Interests Section -->
-        <section id="research" class="content-section">
-            <h2>Research Interests</h2>
-            <div class="section-content">
-                <div class="research-topics">
-                    <div class="research-topic">
-                        <h3>Computer Vision</h3>
-                        <p>Visual perception, scene understanding, object detection and recognition</p>
-                    </div>
-                    <div class="research-topic">
-                        <h3>3D Vision & Reconstruction</h3>
-                        <p>3D scene modeling, depth estimation, visual SLAM, structure from motion</p>
-                    </div>
-                    <div class="research-topic">
-                        <h3>Deep Learning</h3>
-                        <p>Neural network architectures, self-supervised learning, efficient deep learning</p>
-                    </div>
-                    <div class="research-topic">
-                        <h3>Robotics & Autonomous Systems</h3>
-                        <p>Visual navigation, robot perception, autonomous driving</p>
-                    </div>
-                </div>
-            </div>
+            <ul class="news-list">
+                <li><span class="news-year">[2025]</span> I will join NTU as an Assistant Professor! Looking for motivated PhD students and Postdocs.</li>
+                <li><span class="news-year">[2024]</span> Paper accepted to [Conference Name].</li>
+                <li><span class="news-year">[2024]</span> Invited talk at [Institution/Conference].</li>
+                <li><span class="news-year">[2024]</span> I serve as an Area Chair for [Conference].</li>
+            </ul>
         </section>
 
         <!-- Publications Section -->
-        <section id="publications" class="content-section">
+        <section id="publications" class="section-publications">
             <h2>Selected Publications</h2>
-            <div class="section-content">
-                <p class="publication-note">
-                    <a href="#" target="_blank"><i class="ai ai-google-scholar"></i> Full publication list on Google Scholar</a>
-                </p>
+            <p class="pub-links-top">
+                <a href="#"><i class="ai ai-google-scholar"></i> Google Scholar</a> and
+                <a href="#">Full List</a>.
+            </p>
 
-                <!-- 2024 Publications -->
-                <h3 class="year-heading">2024</h3>
-                <div class="publication">
-                    <div class="pub-title">Paper Title Goes Here</div>
-                    <div class="pub-authors">Author 1, <span class="author-self">Jiawang Bian</span>, Author 3</div>
-                    <div class="pub-venue">Conference/Journal Name (Venue Abbreviation), 2024</div>
-                    <div class="pub-links">
-                        <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
-                        <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
-                        <a href="#" class="pub-link"><i class="fas fa-home"></i> Project</a>
-                        <a href="#" class="pub-link"><i class="fas fa-video"></i> Video</a>
-                    </div>
+            <!-- Publication with teaser image -->
+            <div class="publication">
+                <div class="pub-image">
+                    <img src="paper_teaser1.jpg" alt="Paper teaser" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22150%22%3E%3Crect fill=%22%23eee%22 width=%22200%22 height=%22150%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2216%22%3ETeaser%3C/text%3E%3C/svg%3E'">
                 </div>
-
-                <div class="publication">
-                    <div class="pub-title">Another Paper Title with Very Long Name That Demonstrates Text Wrapping</div>
-                    <div class="pub-authors"><span class="author-self">Jiawang Bian</span>, Author 2, Author 3, Author 4</div>
-                    <div class="pub-venue">Conference/Journal Name (Venue Abbreviation), 2024</div>
+                <div class="pub-content">
+                    <h3 class="pub-title">Paper Title Goes Here</h3>
+                    <p class="pub-authors">Author 1, <span class="author-me">Jiawang Bian</span>, Author 3.</p>
+                    <p class="pub-venue">Conference/Journal Name, 2024.</p>
                     <div class="pub-links">
-                        <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
-                        <a href="#" class="pub-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <!-- 2023 Publications -->
-                <h3 class="year-heading">2023</h3>
-                <div class="publication">
-                    <div class="pub-title">Previous Paper Title</div>
-                    <div class="pub-authors">Author 1, Author 2, <span class="author-self">Jiawang Bian</span></div>
-                    <div class="pub-venue">Conference/Journal Name (Venue Abbreviation), 2023</div>
-                    <div class="pub-links">
-                        <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> Paper</a>
-                        <a href="#" class="pub-link"><i class="fas fa-home"></i> Project</a>
+                        <a href="#">[Paper]</a>
+                        <a href="#">[Code]</a>
+                        <a href="#">[Project]</a>
                     </div>
                 </div>
             </div>
+
+            <div class="publication">
+                <div class="pub-image">
+                    <img src="paper_teaser2.jpg" alt="Paper teaser" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22150%22%3E%3Crect fill=%22%23eee%22 width=%22200%22 height=%22150%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2216%22%3ETeaser%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="pub-content">
+                    <h3 class="pub-title">Another Paper with a Longer Title Demonstrating Text Wrapping</h3>
+                    <p class="pub-authors"><span class="author-me">Jiawang Bian</span>, Author 2, Author 3, Author 4.</p>
+                    <p class="pub-venue">Conference/Journal Name (Abbreviation), 2024.</p>
+                    <div class="pub-links">
+                        <a href="#">[Paper]</a>
+                        <a href="#">[Code]</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="pub-image">
+                    <img src="paper_teaser3.jpg" alt="Paper teaser" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22150%22%3E%3Crect fill=%22%23eee%22 width=%22200%22 height=%22150%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2216%22%3ETeaser%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="pub-content">
+                    <h3 class="pub-title">Third Paper Title</h3>
+                    <p class="pub-authors">Author 1, Author 2, <span class="author-me">Jiawang Bian</span>.</p>
+                    <p class="pub-venue">Conference/Journal Name, 2023.</p>
+                    <div class="pub-links">
+                        <a href="#">[Paper]</a>
+                        <a href="#">[Project]</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Group Section (placeholder) -->
+        <section id="group" class="section-group">
+            <h2>Research Group</h2>
+            <p><em>Information coming soon.</em></p>
         </section>
 
         <!-- Teaching Section -->
-        <section id="teaching" class="content-section">
+        <section id="teaching" class="section-teaching">
             <h2>Teaching</h2>
-            <div class="section-content">
-                <p><em>Course information will be updated soon.</em></p>
-
-                <!-- Uncomment when you have courses
-                <div class="course">
-                    <h3>Course Code: Course Name</h3>
-                    <p>Semester, Year</p>
-                    <p>Course description goes here.</p>
-                </div>
-                -->
-            </div>
-        </section>
-
-        <!-- Prospective Students Section -->
-        <section id="prospective" class="content-section highlight-section">
-            <h2>Prospective Students</h2>
-            <div class="section-content">
-                <p>
-                    <strong>I am looking for highly motivated PhD students and Postdocs to join my research group at NTU.</strong>
-                </p>
-
-                <h3>PhD Positions</h3>
-                <p>
-                    I have openings for PhD students starting in [Fall/Spring] 202X. Ideal candidates should have:
-                </p>
-                <ul>
-                    <li>Strong background in computer science, electrical engineering, or related fields</li>
-                    <li>Experience in computer vision, machine learning, or robotics</li>
-                    <li>Solid programming skills (Python, C++, PyTorch/TensorFlow)</li>
-                    <li>Good communication skills and self-motivation</li>
-                    <li>Publications in top-tier venues (preferred but not required)</li>
-                </ul>
-
-                <h3>Postdoc Positions</h3>
-                <p>
-                    I am seeking postdoctoral researchers with strong research records in computer vision,
-                    machine learning, or related areas. Competitive salary and benefits will be provided.
-                </p>
-
-                <h3>How to Apply</h3>
-                <p>
-                    If you are interested in joining my group, please send me an email with:
-                </p>
-                <ul>
-                    <li>Your CV</li>
-                    <li>Transcripts (for PhD applicants)</li>
-                    <li>A brief statement describing your research interests and why you want to join my group</li>
-                    <li>Representative publications (if any)</li>
-                </ul>
-                <p>
-                    <strong>Email:</strong> <a href="mailto:jiawang.bian@ntu.edu.sg">jiawang.bian@ntu.edu.sg</a>
-                </p>
-                <p>
-                    Please use the subject line: <code>[PhD Application]</code> or <code>[Postdoc Application]</code> - Your Name
-                </p>
-            </div>
+            <p><em>Course information will be updated soon.</em></p>
         </section>
 
         <!-- Footer -->
         <footer class="footer">
             <p>&copy; 2024 Jiawang Bian. Last updated: October 2024.</p>
-            <p class="footer-note">
-                Website design inspired by academic homepage best practices.
-            </p>
         </footer>
-    </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
