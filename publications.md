@@ -1,7 +1,7 @@
 ### SurfaceSplat: Connecting Surface Reconstruction and Gaussian Splatting
 ![SurfaceSplat](assets/images/publications/surface_splat.png)
 
-- Authors: Z. Gao*, <strong>J.-W. Bian<sup>*</sup></strong>, G. Lin, H. Chen, C. Shen
+- Authors: Z. Gao*, **J.-W. Bian**<sup>*</sup>, G. Lin, H. Chen, C. Shen
 - Venue: International Conference on Computer Vision (ICCV), 2025
 - Links: [arXiv](https://arxiv.org/abs/2507.15602) | [Code](https://github.com/Gaozihui/SurfaceSplat) | [Scholar](https://scholar.google.com/scholar?q=SurfaceSplat%3A%20Connecting%20Surface%20Reconstruction%20and%20Gaussian%20Splatting)
 - TLDR: Fuses signed-distance surface reconstruction with 3D Gaussian splats under a single optimisation so sparse multi-view data yields crisp, photo-consistent surfaces.
@@ -41,7 +41,7 @@
 ### GaussCtrl: Multi-View Consistent Text-Driven 3D Gaussian Splatting Editing
 ![GaussCtrl](assets/images/publications/gaussctrl.png)
 
-- Authors: J. Wu, <strong>J.-W. Bian<sup>*</sup></strong>, X. Li, G. Wang, I. Reid, P. Torr, V. Prisacariu
+- Authors: J. Wu, **J.-W. Bian**, X. Li, G. Wang, I. Reid, P. Torr, V. Prisacariu
 - Venue: European Conference on Computer Vision (ECCV), 2024
 - Links: [Project](https://gaussctrl.active.vision/) | [Paper](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2153_ECCV_2024_paper.php) | [arXiv](https://arxiv.org/abs/2403.08733) | [Code](https://github.com/ActiveVisionLab/gaussctrl) | [Scholar](https://scholar.google.com/scholar?q=GaussCtrl%3A%20Multi-View%20Consistent%20Text-Driven%203D%20Gaussian%20Splatting%20Editing)
 - TLDR: Drives 3D Gaussian splat editing with text prompts while enforcing multi-view control signals that keep geometry and appearance consistent across cameras.
@@ -61,7 +61,7 @@
 ### SC-DepthV3: Robust Self-supervised Monocular Depth Estimation for Dynamic Scenes
 ![SC-DepthV3](assets/images/publications/sc_depthv3.png)
 
-- Authors: L. Sun<sup>*</sup>, <strong>J.-W. Bian<sup>*</sup></strong>, H. Zhan, W. Yin, I. Reid, C. Shen
+- Authors: L. Sun<sup>*</sup>, **J.-W. Bian**<sup>*</sup>, H. Zhan, W. Yin, I. Reid, C. Shen
 - Venue: IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2023
 - Links: [arXiv](https://arxiv.org/abs/2211.03660) | [Code](https://github.com/JiawangBian/sc_depth_pl) | [Scholar](https://scholar.google.com/scholar?q=SC-DepthV3%3A%20Robust%20Self-supervised%20Monocular%20Depth%20Estimation%20for%20Dynamic%20Scenes)
 - TLDR: Distils pretrained single-image depth priors into the self-supervised pipeline so monocular depth remains detailed and stable in dynamic environments.
