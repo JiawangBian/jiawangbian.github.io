@@ -73,13 +73,20 @@ async function loadPublications() {
         }
 
         const markdown = await response.text();
-        const publications = parsePublications(markdown);
+        let publications = parsePublications(markdown);
+
+        // Sort by year (desc) extracted from venue; items without year go last
+        publications = publications.sort((a, b) => {
+            const ya = extractYearFromVenue(a.venue);
+            const yb = extractYearFromVenue(b.venue);
+            if (ya === yb) return 0;
+            return (yb || -1) - (ya || -1);
+        });
 
         if (!publications.length) {
             container.innerHTML = '<p class="publications-empty">No publications available at the moment.</p>';
             return;
         }
-
         const fragment = document.createDocumentFragment();
         publications.forEach(pub => fragment.appendChild(createPublicationElement(pub)));
 
@@ -234,7 +241,6 @@ function createPublicationElement(publication) {
     if (publication.links.length) {
         const linksContainer = document.createElement('div');
         linksContainer.className = 'pub-links';
-
         publication.links.forEach(link => {
             const anchor = document.createElement('a');
             anchor.href = link.url;
@@ -243,6 +249,15 @@ function createPublicationElement(publication) {
             anchor.textContent = `[${link.label}]`;
             linksContainer.appendChild(anchor);
         });
+        // Add inline BibTeX toggle link
+        const bibToggle = document.createElement('a');
+        bibToggle.href = '#';
+        bibToggle.textContent = '[BibTeX]';
+        bibToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            bibBox.style.display = (bibBox.style.display === 'block') ? 'none' : 'block';
+        });
+        linksContainer.appendChild(bibToggle);
 
         content.appendChild(linksContainer);
     }
@@ -253,6 +268,34 @@ function createPublicationElement(publication) {
         summary.innerHTML = `<span class=\"pub-summary-label\">TLDR:</span> ${renderInlineMarkdown(publication.summary)}`;
         content.appendChild(summary);
     }
+
+    // Inline BibTeX box (hidden by default)
+    const bibBox = document.createElement('div');
+    bibBox.style.display = 'none';
+    bibBox.style.marginTop = '6px';
+
+    const pre = document.createElement('pre');
+    pre.style.whiteSpace = 'pre-wrap';
+    pre.style.background = '#f8f8f8';
+    pre.style.padding = '8px';
+    pre.style.border = '1px solid #eee';
+    pre.style.borderRadius = '4px';
+    pre.style.fontSize = '13px';
+    pre.textContent = generateBibtex(publication);
+
+    const copyLink = document.createElement('a');
+    copyLink.href = '#';
+    copyLink.style.display = 'inline-block';
+    copyLink.style.marginTop = '6px';
+    copyLink.textContent = '[Copy BibTeX]';
+    copyLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        copyTextToClipboard(pre.textContent);
+    });
+
+    bibBox.appendChild(pre);
+    bibBox.appendChild(copyLink);
+    content.appendChild(bibBox);
 
     wrapper.appendChild(content);
     return wrapper;
@@ -274,3 +317,130 @@ function createPlaceholderSvg(label) {
 }
 
 window.addEventListener('DOMContentLoaded', loadPublications);
+
+// ============================================
+// Enhancements: filters, enrich, UI rendering
+// ============================================
+
+function extractYearFromVenue(venue) {
+    if (!venue) return null;
+    const m = String(venue).match(/(19|20)\d{2}/);
+    return m ? parseInt(m[0], 10) : null;
+}
+
+function enrichPublications(publications) {
+    return publications.map(pub => {
+        const yearMatch = (pub.venue || '').match(/(19|20)\d{2}/);
+        const year = yearMatch ? yearMatch[0] : '';
+        const venueLower = (pub.venue || '').toLowerCase();
+        const isJournal = /(journal|transactions|tpami|ijcv|ral|ral\b|ral,|ra-l)/.test(venueLower);
+        const type = isJournal ? 'Journal' : 'Conference';
+        return { ...pub, year, type };
+    });
+}
+
+function renderPublicationsUI(container, publications) {
+    const controls = document.createElement('div');
+    controls.className = 'pub-filters';
+
+    const search = document.createElement('input');
+    search.type = 'search';
+    search.placeholder = 'Search title/authors/venue';
+    search.className = 'pub-search';
+
+    const yearSelect = document.createElement('select');
+    yearSelect.className = 'pub-year';
+    const years = Array.from(new Set(publications.map(p => p.year).filter(Boolean))).sort((a, b) => b.localeCompare(a));
+    yearSelect.innerHTML = ['<option value="">All years</option>'].concat(years.map(y => `<option value="${y}">${y}</option>`)).join('');
+
+    const typeSelect = document.createElement('select');
+    typeSelect.className = 'pub-type';
+    typeSelect.innerHTML = '<option value="">All types</option><option value="Conference">Conference</option><option value="Journal">Journal</option>';
+
+    controls.appendChild(search);
+    controls.appendChild(yearSelect);
+    controls.appendChild(typeSelect);
+
+    const list = document.createElement('div');
+    list.className = 'pub-list';
+
+    function applyFilters() {
+        const q = (search.value || '').trim().toLowerCase();
+        const y = yearSelect.value;
+        const t = typeSelect.value;
+
+        const filtered = publications.filter(p => {
+            const matchQ = !q || [p.title, p.authors, p.venue].join(' ').toLowerCase().includes(q);
+            const matchY = !y || p.year === y;
+            const matchT = !t || p.type === t;
+            return matchQ && matchY && matchT;
+        });
+
+        list.innerHTML = '';
+        if (!filtered.length) {
+            list.innerHTML = '<p class="publications-empty">No matching publications.</p>';
+            return;
+        }
+        const frag = document.createDocumentFragment();
+        filtered.forEach(pub => frag.appendChild(createPublicationElement(pub)));
+        list.appendChild(frag);
+    }
+
+    search.addEventListener('input', applyFilters);
+    yearSelect.addEventListener('change', applyFilters);
+    typeSelect.addEventListener('change', applyFilters);
+
+    container.innerHTML = '';
+    container.appendChild(controls);
+    container.appendChild(list);
+    applyFilters();
+}
+
+function generateBibtex(pub) {
+    const venue = (pub.venue || '').trim();
+    const yearMatch = venue.match(/(19|20)\d{2}/);
+    const year = yearMatch ? yearMatch[0] : 'xxxx';
+    const isJournal = /(journal|transactions|tpami|ijcv|ral\b|ra-l|t-pami|tmm|tip)/i.test(venue);
+    const entryType = isJournal ? 'article' : 'inproceedings';
+    const venueField = isJournal ? `  journal = {${venue}},` : `  booktitle = {${venue}},`;
+    const firstAuthorLast = extractFirstAuthorLast(pub.authors);
+    const key = `${firstAuthorLast}${year}${(pub.title || '').split(/\s+/)[0] || 'paper'}`
+        .replace(/[^a-z0-9]/gi, '')
+        .toLowerCase();
+    const authorsBib = authorsToBibtex(pub.authors);
+    return `@${entryType}{${key},\n  title   = {${pub.title}},\n  author  = {${authorsBib}},\n  year    = {${year}},\n${venueField}\n}`;
+}
+
+function extractFirstAuthorLast(authorsMd) {
+    const plain = authorsMd ? authorsMd.replace(/\*|\**/g, '').replace(/<[^>]+>/g, '') : '';
+    const first = plain.split(/,|;| and /i)[0] || '';
+    const parts = first.trim().split(/\s|\.-/).filter(Boolean);
+    return (parts[parts.length - 1] || 'author').toLowerCase();
+}
+
+function authorsToBibtex(authorsMd) {
+    if (!authorsMd) return '';
+    const cleaned = authorsMd.replace(/\*|\**/g, '').replace(/<[^>]+>/g, '');
+    const parts = cleaned.split(/,|;| and /i).map(s => s.trim()).filter(Boolean);
+    return parts.join(' and ');
+}
+
+function copyTextToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).catch(() => fallbackCopy(text));
+    } else {
+        fallbackCopy(text);
+    }
+}
+
+function fallbackCopy(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'absolute';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(textarea);
+}

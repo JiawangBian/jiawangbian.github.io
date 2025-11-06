@@ -1,7 +1,7 @@
 ### SurfaceSplat: Connecting Surface Reconstruction and Gaussian Splatting
 ![SurfaceSplat](assets/images/publications/surface_splat.png)
 
-- Authors: Z. Gao*, **J.-W. Bian**<sup>*</sup>, G. Lin, H. Chen, C. Shen
+- Authors: Z. Gao*, **J.-W. Bian**, G. Lin, H. Chen, C. Shen
 - Venue: International Conference on Computer Vision (ICCV), 2025
 - Links: [arXiv](https://arxiv.org/abs/2507.15602) | [Code](https://github.com/Gaozihui/SurfaceSplat) | [Scholar](https://scholar.google.com/scholar?q=SurfaceSplat%3A%20Connecting%20Surface%20Reconstruction%20and%20Gaussian%20Splatting)
 - TLDR: Fuses signed-distance surface reconstruction with 3D Gaussian splats under a single optimisation so sparse multi-view data yields crisp, photo-consistent surfaces.
