@@ -423,92 +423,6 @@ a:hover {
     font-size: 14px;
 }
 
-/* ============================================
-   Responsive Design
-   ============================================ */
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .about-photo {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-    }
-
-    .about-photo img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .about-info {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .publication {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 16px;
-    }
-
-    .pub-image img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-
-    .nav-menu {
-        gap: 18px;
-        font-size: 14px;
-    }
-
-    .info-column h1 {
-        font-size: 32px;
-    }
-
-    .news-list li {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-container {
-        padding: 24px 18px;
-    }
-
-    .nav-menu {
-        display: none;
-    }
-
-    .theme-toggle {
-        width: 32px;
-        height: 32px;
-        font-size: 14px;
-    }
-
-    .info-column h1 {
-        font-size: 28px;
-    }
-
-    .section-publications h2,
-    .section-news h2 {
-        font-size: 26px;
-    }
-
-    .publication {
-        padding: 14px;
-        margin-bottom: 18px;
-    }
-
-    .pub-title {
-        font-size: 17px;
-    }
-}
 .section-publications {
     margin-bottom: 40px;
 }
@@ -733,23 +647,43 @@ a:hover {
    Responsive Design
    ============================================ */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
         gap: 24px;
     }
 
     .about-photo {
-        text-align: center;
-    }
-
-    .about-photo img {
         width: 180px;
         height: 180px;
+        margin: 0 auto;
     }
 
     .about-info {
         grid-template-columns: 1fr;
         gap: 20px;
+        text-align: center;
+    }
+    
+    .info-column {
+        align-items: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .interests-list {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .bio p {
+        text-align: left;
     }
 
     .publication {
@@ -757,13 +691,19 @@ a:hover {
         gap: 16px;
     }
 
+    .pub-image {
+        display: flex;
+        justify-content: center;
+    }
+
     .pub-image img {
         width: 100%;
-        max-width: 220px;
+        max-width: 280px;
+        height: auto;
     }
 
     .nav-menu {
-        gap: 15px;
+        gap: 16px;
         font-size: 14px;
     }
 
@@ -773,12 +713,28 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
     .main-container {
-        padding: 20px 16px;
+        padding: 24px 16px;
+    }
+
+    .nav-brand {
+        font-size: 16px;
     }
 
     .nav-menu {
-        display: none;
+        display: flex; /* Prevent hiding on mobile */
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .theme-toggle {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
     }
 
     .info-column h1 {
@@ -788,5 +744,19 @@ a:hover {
     .section-publications h2,
     .section-news h2 {
         font-size: 24px;
+    }
+
+    .publication {
+        padding: 14px;
+        margin-bottom: 18px;
+    }
+
+    .pub-title {
+        font-size: 17px;
+    }
+    
+    .about-photo {
+        width: 150px;
+        height: 150px;
     }
 }
