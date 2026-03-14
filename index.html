@@ -4,21 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jiawang Bian - Assistant Professor at NTU">
-    <meta name="keywords" content="Jiawang Bian, Computer Vision, Machine Learning, NTU, Research">
+    <meta name="description" content="Jiawang Bian - Research Scientist at Bytedance Seed">
+    <meta name="keywords" content="Jiawang Bian, Computer Vision, Machine Learning, Research, Bytedance">
     <title>Jiawang Bian</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css">
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Jiawang Bian - NTU">
+    <meta property="og:title" content="Jiawang Bian">
     <meta property="og:description" content="Spatial AI, world models, multimodal learning, and 3D computer vision.">
     <meta property="og:url" content="https://jiawangbian.github.io/">
     <meta property="og:image" content="https://jiawangbian.github.io/bjw_square.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jiawang Bian - NTU">
+    <meta name="twitter:title" content="Jiawang Bian">
     <meta name="twitter:description" content="Spatial AI, world models, multimodal learning, and 3D computer vision.">
     <meta name="twitter:image" content="https://jiawangbian.github.io/bjw_square.png">
 
@@ -28,14 +29,14 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Jiawang Bian",
-      "jobTitle": "Nanyang Assistant Professor",
+      "jobTitle": "Research Scientist",
       "affiliation": {
         "@type": "Organization",
-        "name": "Nanyang Technological University"
+        "name": "Bytedance Seed"
       },
       "worksFor": {
-        "@type": "CollegeOrUniversity",
-        "name": "College of Computing and Data Science, NTU"
+        "@type": "Organization",
+        "name": "Bytedance Seed"
       },
       "email": "mailto:jiawang.bian@gmail.com",
       "url": "https://jiawangbian.github.io/",
@@ -55,23 +56,26 @@
     <nav class="top-nav">
         <div class="container">
             <div class="nav-brand">Jiawang Bian</div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="group.html">Group</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Main Content -->
     <div class="main-container">
         <!-- About Section -->
-        <section id="home" class="section-about">
+        <section id="home" class="section-about reveal">
             <div class="about-grid">
                 <!-- Left: Photo -->
                 <div class="about-photo">
-                    <img src="bjw_square.png" alt="Jiawang Bian">
+                    <img src="bjw_square.png" alt="Jiawang Bian" fetchpriority="high">
                 </div>
 
                 <!-- Right: Info (Two columns) -->
@@ -79,15 +83,19 @@
                     <!-- Left column: Basic info -->
                     <div class="info-column">
                         <h1>Jiawang Bian</h1>
-                        <p class="title">Nanyang Assistant Professor</p>
-                        <p class="affiliation">College of Computing and Data Science<br>Nanyang Technological University
-                        </p>
+                        <p class="title">Research Scientist</p>
+                        <p class="affiliation">Bytedance Seed</p>
                         <p class="email">Email: jiawang.bian[at]gmail.com</p>
                         <div class="social-icons">
-                            <a href="https://github.com/JiawangBian" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://scholar.google.com.au/citations?user=zeGz5JcAAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-                            <a href="https://orcid.org/0000-0003-2046-3363" target="_blank" rel="noopener" title="ORCID"><i class="ai ai-orcid"></i></a>
-                            <a href="https://www.semanticscholar.org/author/Jiawang-Bian/3459992" target="_blank" rel="noopener" title="Semantic Scholar"><i class="ai ai-semantic-scholar"></i></a>
+                            <a href="https://github.com/JiawangBian" target="_blank" rel="noopener" title="GitHub"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://scholar.google.com.au/citations?user=zeGz5JcAAAAJ&hl=en" target="_blank"
+                                rel="noopener" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+                            <a href="https://orcid.org/0000-0003-2046-3363" target="_blank" rel="noopener"
+                                title="ORCID"><i class="ai ai-orcid"></i></a>
+                            <a href="https://www.semanticscholar.org/author/Jiawang-Bian/3459992" target="_blank"
+                                rel="noopener" title="Semantic Scholar"><i class="ai ai-semantic-scholar"></i></a>
+                            <a href="Jiawang_Bian - CV.pdf" target="_blank" rel="noopener" title="Curriculum Vitae" style="margin-left: 10px; font-size: 16px; border: 1px solid var(--color-border); padding: 5px 12px; border-radius: var(--radius-md); text-decoration: none; display: flex; align-items: center; gap: 6px;"><i class="fas fa-file-pdf"></i> CV</a>
                         </div>
                     </div>
 
@@ -107,53 +115,30 @@
             <!-- Bio paragraphs -->
             <div class="bio">
                 <p>
-                    I will join <a href="https://www.ntu.edu.sg/" target="_blank">Nanyang Technological University
-                        (NTU)</a> as a Nanyang Assistant Professor in the <a href="https://www.ntu.edu.sg/computing"
-                        target="_blank">College of Computing and Data Science</a> in May 2026.
-                    My research focuses on <strong>Spatial AI</strong>, <strong>world models</strong>, and
-                    <strong>multimodal models</strong>.
-                    I aim to bridge 3D computer vision and next-generation AI systems that understand and interact with
-                    the physical world.
-                </p>
-                <p>
-                    Currently, I am a Research Scientist at <a href="https://www.bytedance.com/"
-                        target="_blank">Bytedance Seed</a> (since April 2025).
-                    Previously, I was a postdoctoral researcher at <a href="https://mbzuai.ac.ae/"
-                        target="_blank">MBZUAI</a> (2024-2025) working with <a
-                        href="https://mbzuai.ac.ae/study/faculty/ian-reid/" target="_blank">Prof. Ian Reid</a>,
-                    and at the <a href="https://www.ox.ac.uk/" target="_blank">University of Oxford</a> (2022-2023)
-                    working with <a href="https://www.robots.ox.ac.uk/~phst/" target="_blank">Prof. Philip Torr</a>.
-                    I received my Ph.D. from the <a href="https://www.adelaide.edu.au/" target="_blank">University of
-                        Adelaide</a> in 2022, supervised by <a href="https://mbzuai.ac.ae/study/faculty/ian-reid/"
-                        target="_blank">Prof. Ian Reid</a> and <a href="https://cshen.github.io/" target="_blank">Prof.
-                        Chunhua Shen</a>,
-                    and my B.Eng. from <a href="https://www.nankai.edu.cn/" target="_blank">Nankai University</a> in
-                    2016, supervised by <a href="https://mmcheng.net/" target="_blank">Prof. Ming-Ming Cheng</a>.
-                </p>
-
-                <h3>To Prospective Students:</h3>
-                <p>
-                    I am looking for highly motivated <strong>PhD students</strong>, <strong>Postdocs</strong>,
-                    <strong>Research Assistants</strong>, and <strong>Visiting Students</strong> to join my group at NTU
-                    starting in 2026.
-                    If you are interested in Spatial AI, world models, multimodal learning, or 3D computer vision,
-                    please send me an email with your CV.
+                    I am a Research Scientist at <a href="https://www.bytedance.com/" target="_blank">Bytedance Seed</a>.
+                    My research focuses on <strong>Spatial AI</strong>, <strong>world models</strong>, and <strong>multimodal models</strong>.
+                    I am broadly interested in how AI systems can develop genuine spatial intelligence —
+                    perceiving 3D structure, reasoning about spatial relationships, and simulating how the world evolves.
+                    Previously, I was a postdoctoral researcher at <a href="https://mbzuai.ac.ae/" target="_blank">MBZUAI</a> working with <a href="https://mbzuai.ac.ae/study/faculty/ian-reid/" target="_blank">Prof. Ian Reid</a>,
+                    and at the <a href="https://www.ox.ac.uk/" target="_blank">University of Oxford</a> working with <a href="https://www.robots.ox.ac.uk/~phst/" target="_blank">Prof. Philip Torr</a>.
+                    I received my Ph.D. from the <a href="https://www.adelaide.edu.au/" target="_blank">University of Adelaide</a> in 2022, supervised by <a href="https://mbzuai.ac.ae/study/faculty/ian-reid/" target="_blank">Prof. Ian Reid</a> and <a href="https://cshen.github.io/" target="_blank">Prof. Chunhua Shen</a>,
+                    and my B.Eng. from <a href="https://www.nankai.edu.cn/" target="_blank">Nankai University</a> in 2016, supervised by <a href="https://mmcheng.net/" target="_blank">Prof. Ming-Ming Cheng</a>.
                 </p>
             </div>
         </section>
 
         <!-- News Section -->
-        <section id="news" class="section-news">
+        <section id="news" class="section-news reveal">
             <h2>News</h2>
             <ul class="news-list">
-                <li><span class="news-year">[2025]</span> I will join NTU as a Nanyang Assistant Professor in May 2026!
-                    Looking for motivated PhD students, Postdocs, RAs, and Visiting Students.</li>
+                <li><span class="news-year">[2025]</span> One paper accepted to ACM MM 2025 (OmniGen).</li>
+                <li><span class="news-year">[2025]</span> Two papers accepted to ICCV 2025 (SurfaceSplat, RoboPearls).
+                </li>
                 <li><span class="news-year">[2025]</span> I joined Bytedance Seed as a Research Scientist.</li>
                 <li><span class="news-year">[2025]</span> One paper accepted to RA-L (Manydepth2).</li>
-                <li><span class="news-year">[2024]</span> Three papers accepted to CVPR 2024 (PoRF, NeFes) and ECCV 2024
+                <li><span class="news-year">[2024]</span> Three papers accepted to CVPR 2024 (PoRF, NeFeS) and ECCV 2024
                     (GaussCtrl).</li>
-                <li><span class="news-year">[2024]</span> One paper accepted to ICLR 2024 (PoRF: Pose Residual Field for
-                    Accurate Neural Surface Reconstruction).</li>
+                <li><span class="news-year">[2024]</span> One paper accepted to ICLR 2024 (PoRF).</li>
                 <li><span class="news-year">[2024]</span> I joined MBZUAI as a Postdoctoral Researcher.</li>
                 <li><span class="news-year">[2023]</span> Two papers accepted to CVPR 2023 (NoPe-NeRF, MobileBrick).
                 </li>
@@ -161,9 +146,9 @@
         </section>
 
         <!-- Publications Section -->
-        <section id="publications" class="section-publications">
+        <section id="publications" class="section-publications reveal">
             <h2>Selected Publications</h2>
-            <div id="publications-container" class="publications-container" data-source="publications.md?v=20251102">
+            <div id="publications-container" class="publications-container" data-source="publications.md?v=20260224">
                 <p class="publications-loading">Loading publications...</p>
             </div>
             <noscript>
@@ -173,7 +158,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2025 Jiawang Bian. Last updated: October 2025.</p>
+            <p>&copy; <span id="copyright-year"></span> Jiawang Bian. Last updated: <span id="update-date"></span>.</p>
         </footer>
     </div>
 

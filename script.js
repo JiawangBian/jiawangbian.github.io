@@ -1,4 +1,64 @@
 // ============================================
+// Dark Mode Toggle
+// ============================================
+function initThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlElement = document.documentElement;
+
+    // Check for saved theme preference or default to 'light'
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    }
+
+    function updateThemeIcon(theme) {
+        if (themeIcon) {
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+            } else {
+                themeIcon.className = 'fas fa-moon';
+            }
+        }
+    }
+}
+
+// Initialize theme toggle on page load
+document.addEventListener('DOMContentLoaded', initThemeToggle);
+
+// ============================================
+// Dynamic Footer Dates
+// ============================================
+function updateFooterDates() {
+    const copyrightYear = document.getElementById('copyright-year');
+    const updateDate = document.getElementById('update-date');
+
+    if (copyrightYear) {
+        copyrightYear.textContent = new Date().getFullYear();
+    }
+
+    if (updateDate) {
+        const now = new Date();
+        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                           'July', 'August', 'September', 'October', 'November', 'December'];
+        updateDate.textContent = `${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+    }
+}
+
+// Initialize footer dates on page load
+document.addEventListener('DOMContentLoaded', updateFooterDates);
+
+// ============================================
 // Smooth scrolling for anchor links
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -56,6 +116,25 @@ window.addEventListener('scroll', updateActiveNav);
 window.addEventListener('load', updateActiveNav);
 
 // ============================================
+// Scroll Reveal Animations
+// ============================================
+function reveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('active');
+        }
+    }
+}
+window.addEventListener('scroll', reveal);
+// Trigger on page load
+window.addEventListener('DOMContentLoaded', reveal);
+
+
+// ============================================
 // Publications loader from Markdown
 // ============================================
 async function loadPublications() {
@@ -87,11 +166,11 @@ async function loadPublications() {
             container.innerHTML = '<p class="publications-empty">No publications available at the moment.</p>';
             return;
         }
-        const fragment = document.createDocumentFragment();
-        publications.forEach(pub => fragment.appendChild(createPublicationElement(pub)));
+        
+        // Enrich publications and render UI
+        publications = enrichPublications(publications);
+        renderPublicationsUI(container, publications);
 
-        container.innerHTML = '';
-        container.appendChild(fragment);
     } catch (error) {
         console.error('Failed to load publications:', error);
         if (window.location.protocol === 'file:') {
@@ -276,17 +355,19 @@ function createPublicationElement(publication) {
 
     const pre = document.createElement('pre');
     pre.style.whiteSpace = 'pre-wrap';
-    pre.style.background = '#f8f8f8';
-    pre.style.padding = '8px';
-    pre.style.border = '1px solid #eee';
-    pre.style.borderRadius = '4px';
+    pre.style.background = 'var(--color-background-code)';
+    pre.style.padding = '12px';
+    pre.style.border = '1px solid var(--color-border-code)';
+    pre.style.color = 'var(--color-text-secondary)';
+    pre.style.borderRadius = 'var(--radius-md)';
     pre.style.fontSize = '13px';
     pre.textContent = generateBibtex(publication);
 
     const copyLink = document.createElement('a');
     copyLink.href = '#';
     copyLink.style.display = 'inline-block';
-    copyLink.style.marginTop = '6px';
+    copyLink.style.marginTop = '8px';
+    copyLink.style.fontSize = '14px';
     copyLink.textContent = '[Copy BibTeX]';
     copyLink.addEventListener('click', (e) => {
         e.preventDefault();

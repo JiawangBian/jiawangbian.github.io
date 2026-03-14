@@ -1,7 +1,17 @@
+### OmniGen: Unified Multimodal Sensor Generation for Autonomous Driving
+![OmniGen](assets/images/publications/omnigen.png)
+
+- Authors: T. Tang, E. Ma, X. Zhou, L. Wang, T. Yan, X. Zhang, K. Zhan, P. Jia, X. Lang, **J.-W. Bian**, K. Yu, X. Liang
+- Venue: ACM International Conference on Multimedia (MM), 2025
+- Links: [Paper](https://doi.org/10.1145/3746027.3754772) | [arXiv](https://arxiv.org/abs/2512.14225) | [Scholar](https://scholar.google.com/scholar?q=OmniGen%3A%20Unified%20Multimodal%20Sensor%20Generation%20for%20Autonomous%20Driving)
+- TLDR: Unified framework that controllably generates aligned LiDAR and multi-view camera data for autonomous driving with cross-modality consistency and flexible sensor control.
+
+---
+
 ### SurfaceSplat: Connecting Surface Reconstruction and Gaussian Splatting
 ![SurfaceSplat](assets/images/publications/surface_splat.png)
 
-- Authors: Z. Gao*, **J.-W. Bian**, G. Lin, H. Chen, C. Shen
+- Authors: Z. Gao, **J.-W. Bian**, G. Lin, H. Chen, C. Shen
 - Venue: International Conference on Computer Vision (ICCV), 2025
 - Links: [arXiv](https://arxiv.org/abs/2507.15602) | [Code](https://github.com/Gaozihui/SurfaceSplat) | [Scholar](https://scholar.google.com/scholar?q=SurfaceSplat%3A%20Connecting%20Surface%20Reconstruction%20and%20Gaussian%20Splatting)
 - TLDR: Fuses signed-distance surface reconstruction with 3D Gaussian splats under a single optimisation so sparse multi-view data yields crisp, photo-consistent surfaces.
@@ -61,7 +71,7 @@
 ### SC-DepthV3: Robust Self-supervised Monocular Depth Estimation for Dynamic Scenes
 ![SC-DepthV3](assets/images/publications/sc_depthv3.png)
 
-- Authors: L. Sun<sup>*</sup>, **J.-W. Bian**<sup>*</sup>, H. Zhan, W. Yin, I. Reid, C. Shen
+- Authors: L. Sun, **J.-W. Bian**, H. Zhan, W. Yin, I. Reid, C. Shen
 - Venue: IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2023
 - Links: [arXiv](https://arxiv.org/abs/2211.03660) | [Code](https://github.com/JiawangBian/sc_depth_pl) | [Scholar](https://scholar.google.com/scholar?q=SC-DepthV3%3A%20Robust%20Self-supervised%20Monocular%20Depth%20Estimation%20for%20Dynamic%20Scenes)
 - TLDR: Distils pretrained single-image depth priors into the self-supervised pipeline so monocular depth remains detailed and stable in dynamic environments.
