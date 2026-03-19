@@ -14,6 +14,8 @@
     --color-background-code: #f8f8f8;
     --color-shadow: rgba(0, 0, 0, 0.1);
     --color-border-code: #eeeeee;
+    --color-accent-red: #e53e3e;
+    --color-accent-red-bg: rgba(229, 62, 62, 0.1);
 
     /* Typography */
     --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -54,6 +56,8 @@
     --color-background-code: #2d3748;
     --color-shadow: rgba(0, 0, 0, 0.3);
     --color-border-code: #4a5568;
+    --color-accent-red: #fc8181;
+    --color-accent-red-bg: rgba(252, 129, 129, 0.15);
 }
 
 /* ============================================
@@ -363,6 +367,28 @@ a:hover {
     margin-bottom: 10px;
     color: var(--color-text-primary);
     letter-spacing: -0.01em;
+}
+
+.recruitment {
+    background-color: var(--color-background-subtle);
+    padding: 18px 22px;
+    border-radius: var(--radius-md);
+    border-left: 5px solid var(--color-accent-red);
+    margin: 28px 0 !important;
+    box-shadow: var(--shadow-sm);
+}
+
+.recruitment p {
+    margin-bottom: 0 !important;
+    font-style: normal !important;
+    color: var(--color-text-primary) !important;
+    text-align: left !important;
+    font-weight: 500;
+}
+
+.highlight-red {
+    color: var(--color-accent-red);
+    font-weight: 700;
 }
 
 /* ============================================
