@@ -369,6 +369,28 @@ a:hover {
     letter-spacing: -0.01em;
 }
 
+.lab-vision {
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.lab-name {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.lab-tagline {
+    color: var(--color-text-secondary);
+    font-style: italic;
+}
+
+.lab-description {
+    margin-top: 12px;
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
 .recruitment {
     background-color: var(--color-background-subtle);
     padding: 18px 22px;
@@ -382,7 +404,7 @@ a:hover {
     margin-bottom: 0 !important;
     font-style: normal !important;
     color: var(--color-text-primary) !important;
-    text-align: left !important;
+    text-align: justify !important;
     font-weight: 500;
 }
 
