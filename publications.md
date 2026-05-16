@@ -1,3 +1,33 @@
+### Feed-Forward 3D Scene Modeling: A Problem-Driven Perspective
+![FF3D Survey](assets/images/publications/ff3d_survey.png)
+
+- Authors: W. Wang, Q. Cao, S. Gao, D. Chen, H. Xu, W. Bian, S. Peng, T. Cham, C. Zheng, A. Geiger, J. Cai, **J.-W. Bian**, B. Zhuang
+- Venue: arXiv, 2026
+- Links: [arXiv](https://arxiv.org/abs/2604.14025)
+- TLDR: A survey of feed-forward 3D scene reconstruction methods, organized around five core design problems: feature enhancement, geometry awareness, model efficiency, augmentation, and temporal modeling.
+
+---
+
+### OneWorld: Taming Scene Generation with 3D Unified Representation Autoencoder
+![OneWorld](assets/images/publications/one_world.png)
+
+- Authors: S. Gao, Z. Wang, Q. Cao, D. Yu, C. Wang, T. Liu, M. Gong, **J.-W. Bian**
+- Venue: arXiv, 2026
+- Links: [arXiv](https://arxiv.org/abs/2603.16099)
+- TLDR: A 3D unified representation autoencoder for coherent multi-view scene generation with cross-view consistency and reduced train-inference discrepancy.
+
+---
+
+### Thinking with Geometry: Active Geometry Integration for Spatial Reasoning
+![GeoThinker](assets/images/publications/thinking_with_geometry.png)
+
+- Authors: H. Li, Q. Cao, T. Tang, K. Xiang, Z. Guo, J. Han, H. Xu, **J.-W. Bian**, X. Liang
+- Venue: International Conference on Machine Learning (ICML), 2026
+- Links: [arXiv](https://arxiv.org/abs/2602.06037) | [Code](https://github.com/Li-Hao-yuan/GeoThinker)
+- TLDR: GeoThinker enables multimodal LLMs to actively retrieve and integrate geometric information for spatial reasoning, achieving state-of-the-art on VSI-Bench.
+
+---
+
 ### OmniGen: Unified Multimodal Sensor Generation for Autonomous Driving
 ![OmniGen](assets/images/publications/omnigen.png)
 
