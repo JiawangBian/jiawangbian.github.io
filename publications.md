@@ -3,7 +3,7 @@
 
 - Authors: W. Wang, Q. Cao, S. Gao, D. Chen, H. Xu, W. Bian, S. Peng, T. Cham, C. Zheng, A. Geiger, J. Cai, **J.-W. Bian**, B. Zhuang
 - Venue: arXiv, 2026
-- Links: [arXiv](https://arxiv.org/abs/2604.14025)
+- Links: [Project](https://ff3d-survey.github.io) | [arXiv](https://arxiv.org/abs/2604.14025) | [Code](https://github.com/ziplab/Awesome-Feed-Forward-3D)
 - TLDR: A survey of feed-forward 3D scene reconstruction methods, organized around five core design problems: feature enhancement, geometry awareness, model efficiency, augmentation, and temporal modeling.
 
 ---
@@ -13,7 +13,7 @@
 
 - Authors: S. Gao, Z. Wang, Q. Cao, D. Yu, C. Wang, T. Liu, M. Gong, **J.-W. Bian**
 - Venue: arXiv, 2026
-- Links: [arXiv](https://arxiv.org/abs/2603.16099)
+- Links: [arXiv](https://arxiv.org/abs/2603.16099) | [Code](https://github.com/SensenGao/OneWorld)
 - TLDR: A 3D unified representation autoencoder for coherent multi-view scene generation with cross-view consistency and reduced train-inference discrepancy.
 
 ---
