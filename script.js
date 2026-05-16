@@ -186,7 +186,7 @@ function parsePublications(markdown) {
         return [];
     }
 
-    const normalised = markdown.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').trim();
+    const normalised = markdown.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').replace(/<!--[\s\S]*?-->/g, '').trim();
     if (!normalised) {
         return [];
     }
