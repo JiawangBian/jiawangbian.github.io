@@ -12,9 +12,19 @@
 ![OneWorld](assets/images/publications/one_world.png)
 
 - Authors: S. Gao, Z. Wang, Q. Cao, D. Yu, C. Wang, T. Liu, M. Gong, **J.-W. Bian**
-- Venue: arXiv, 2026
+- Venue: European Conference on Computer Vision (ECCV), 2026
 - Links: [arXiv](https://arxiv.org/abs/2603.16099) | [Code](https://github.com/SensenGao/OneWorld) | [Scholar](https://scholar.google.com/scholar?q=OneWorld+Taming+Scene+Generation+3D+Unified+Representation+Autoencoder)
 - TLDR: A 3D unified representation autoencoder for coherent multi-view scene generation with cross-view consistency and reduced train-inference discrepancy.
+
+---
+
+### Taming Camera-Controlled Video Generation with Verifiable Geometry Reward
+![Taming Camera](assets/images/publications/taming_camera.png)
+
+- Authors: Z. Wang, X. Xia, Z. Bie, J. Liu, D. Yu, **J.-W. Bian**, C. Wang
+- Venue: European Conference on Computer Vision (ECCV), 2026
+- Links: [arXiv](https://arxiv.org/abs/2512.02870) | [Scholar](https://scholar.google.com/scholar?q=Taming+Camera-Controlled+Video+Generation+with+Verifiable+Geometry+Reward)
+- TLDR: An online RL post-training framework that uses verifiable geometry rewards with dense segment-level feedback to improve camera trajectory control in video diffusion models.
 
 ---
 
@@ -72,16 +82,6 @@
 
 ---
 
-### PoRF: Pose Residual Field for Accurate Neural Surface Reconstruction
-![PoRF](assets/images/publications/porf.png)
-
-- Authors: **J.-W. Bian**, W. Bian, V. A. Prisacariu, P. H. Torr
-- Venue: International Conference on Learning Representations (ICLR), 2024
-- Links: [Project](https://porf.active.vision/) | [arXiv](https://arxiv.org/abs/2310.07449) | [Code](https://github.com/ActiveVisionLab/porf) | [Scholar](https://scholar.google.com/scholar?q=PoRF%3A+Pose+Residual+Field+for+Accurate+Neural+Surface+Reconstruction)
-- TLDR: Predicts pose residual fields inside the neural surface optimiser, continually correcting camera drift to recover sharp geometry and textures.
-
----
-
 ### GaussCtrl: Multi-View Consistent Text-Driven 3D Gaussian Splatting Editing
 ![GaussCtrl](assets/images/publications/gaussctrl.png)
 
@@ -89,6 +89,16 @@
 - Venue: European Conference on Computer Vision (ECCV), 2024
 - Links: [Project](https://gaussctrl.active.vision/) | [arXiv](https://arxiv.org/abs/2403.08733) | [Code](https://github.com/ActiveVisionLab/gaussctrl) | [Scholar](https://scholar.google.com/scholar?q=GaussCtrl%3A+Multi-View+Consistent+Text-Driven+3D+Gaussian+Splatting+Editing)
 - TLDR: Drives 3D Gaussian splat editing with text prompts while enforcing multi-view control signals that keep geometry and appearance consistent across cameras.
+
+---
+
+### PoRF: Pose Residual Field for Accurate Neural Surface Reconstruction
+![PoRF](assets/images/publications/porf.png)
+
+- Authors: **J.-W. Bian**, W. Bian, V. A. Prisacariu, P. H. Torr
+- Venue: International Conference on Learning Representations (ICLR), 2024
+- Links: [Project](https://porf.active.vision/) | [arXiv](https://arxiv.org/abs/2310.07449) | [Code](https://github.com/ActiveVisionLab/porf) | [Scholar](https://scholar.google.com/scholar?q=PoRF%3A+Pose+Residual+Field+for+Accurate+Neural+Surface+Reconstruction)
+- TLDR: Predicts pose residual fields inside the neural surface optimiser, continually correcting camera drift to recover sharp geometry and textures.
 
 ---
 
