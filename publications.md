@@ -1,3 +1,13 @@
+### PixWorld: Unifying 3D Scene Generation and Reconstruction in Pixel Space
+![PixWorld](assets/images/publications/pixworld.png)
+
+- Authors: S. Gao, Z. Wang, Q. Cao, D. Yu, C. Wang, **J.-W. Bian**
+- Venue: arXiv, 2026
+- Links: [Project](https://sensengao.github.io/PixWorld/) | [arXiv](https://arxiv.org/abs/2607.05373) | [Scholar](https://scholar.google.com/scholar?q=PixWorld+Unifying+3D+Scene+Generation+and+Reconstruction+in+Pixel+Space)
+- TLDR: Unifies 3D scene generation and reconstruction under a single pixel-space diffusion paradigm, supervising diffusion directly on rendered images and using a geometry perception loss from a pretrained 3D foundation model.
+
+---
+
 ### Feed-Forward 3D Scene Modeling: A Problem-Driven Perspective
 ![FF3D Survey](assets/images/publications/ff3d_survey.png)
 
