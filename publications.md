@@ -1,3 +1,13 @@
+### SoL-Pi: Scaling Auto-Research Loops for Efficient Agent Harnesses
+![SoL-Pi](assets/images/publications/sol_pi.png)
+
+- Authors: H. Liu, T. Ye, S. Gao, Q. Cao, Y. Li, M. Zhuge, D. Wang, R. Zhang, **J.-W. Bian**, L. Zhu, L. Zhu, E. Xie, S. Han
+- Venue: arXiv, 2026
+- Links: [Project](https://nvlabs.github.io/SoL-Pi/) | [arXiv](https://arxiv.org/abs/2609.20519) | [Code](https://github.com/NVlabs/SoL-Pi) | [Scholar](https://scholar.google.com/scholar?q=SoL-Pi+Scaling+Auto-Research+Loops+for+Efficient+Agent+Harnesses)
+- TLDR: An automated pipeline that recursively discovers and validates mechanisms for improving coding-agent harnesses, surfacing four mechanisms that cut inference cost while preserving task performance.
+
+---
+
 ### PixWorld: Unifying 3D Scene Generation and Reconstruction in Pixel Space
 ![PixWorld](assets/images/publications/pixworld.png)
 
