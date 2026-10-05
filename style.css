@@ -658,6 +658,48 @@ a:hover {
     border-top: 1px solid var(--color-border);
 }
 
+.section-group h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 24px 0 12px;
+    color: var(--color-text-primary);
+}
+
+.member-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.member-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-background-subtle);
+}
+
+.member-photo {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.member-name {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.section-group .member-meta {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+}
+
 .section-group p,
 .section-teaching p {
     font-size: 16px;
