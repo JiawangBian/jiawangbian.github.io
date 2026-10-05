@@ -652,6 +652,12 @@ a:hover {
     color: var(--color-text-primary);
 }
 
+.section-teaching ul + h3 {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+}
+
 .section-group p,
 .section-teaching p {
     font-size: 16px;
