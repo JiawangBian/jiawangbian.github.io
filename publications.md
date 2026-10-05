@@ -68,18 +68,6 @@
 
 ---
 
-<!-- HIDDEN: OmniGen
-### OmniGen: Unified Multimodal Sensor Generation for Autonomous Driving
-![OmniGen](assets/images/publications/omnigen.png)
-
-- Authors: T. Tang, E. Ma, X. Zhou, L. Wang, T. Yan, X. Zhang, K. Zhan, P. Jia, X. Lang, **J.-W. Bian**, K. Yu, X. Liang
-- Venue: ACM International Conference on Multimedia (MM), 2025
-- Links: [Paper](https://doi.org/10.1145/3746027.3754772) | [arXiv](https://arxiv.org/abs/2512.14225) | [Scholar](https://scholar.google.com/scholar?q=OmniGen%3A%20Unified%20Multimodal%20Sensor%20Generation%20for%20Autonomous%20Driving)
-- TLDR: Unified framework that controllably generates aligned LiDAR and multi-view camera data for autonomous driving with cross-modality consistency and flexible sensor control.
--->
-
----
-
 ### SurfaceSplat: Connecting Surface Reconstruction and Gaussian Splatting
 ![SurfaceSplat](assets/images/publications/surface_splat.png)
 
@@ -100,7 +88,6 @@
 
 ---
 
-<!-- HIDDEN: Manydepth2
 ### Manydepth2: Motion-aware Self-supervised Monocular Depth Estimation in Dynamic Scenes
 ![Manydepth2](assets/images/publications/manydepth2.png)
 
@@ -108,7 +95,6 @@
 - Venue: IEEE Robotics and Automation Letters (RA-L), 2025
 - Links: [Paper](https://doi.org/10.1109/LRA.2025.3568337) | [Code](https://github.com/kaichen-z/Manydepth2) | [Scholar](https://scholar.google.com/scholar?q=Manydepth2%3A+Motion-aware+Self-supervised+Monocular+Depth+Estimation+in+Dynamic+Scenes)
 - TLDR: Couples learned motion masks with temporal flow cues so self-supervised monocular depth stays stable on highly dynamic street scenes.
--->
 
 ---
 
@@ -176,8 +162,8 @@
 ![Unsupervised Scale-consistent Depth Learning from Video](assets/images/publications/sc_depth_ijcv.png)
 
 - Authors: **J.-W. Bian**, H. Zhan, N. Wang, Z. Li, L. Zhang, C. Shen, M.-M. Cheng, I. Reid
-- Venue: International Journal of Computer Vision (IJCV), 2021
-- Links: [arXiv](https://arxiv.org/abs/1908.10553) | [Code](https://github.com/JiawangBian/SC-SfMLearner-Release) | [Scholar](https://scholar.google.com/scholar?q=Unsupervised+Scale-consistent+Depth+Learning+from+Video)
+- Venue: International Journal of Computer Vision (IJCV), 2021; Conference on Neural Information Processing Systems (NeurIPS), 2019
+- Links: [IJCV arXiv](https://arxiv.org/abs/2105.11610) | [NeurIPS Paper](https://proceedings.neurips.cc/paper/2019/hash/6364d3f0f495b6ab9dcf8d3b5c6e0b01-Abstract.html) | [NeurIPS arXiv](https://arxiv.org/abs/1908.10553) | [Code](https://github.com/JiawangBian/SC-SfMLearner-Release) | [Scholar](https://scholar.google.com/scholar?q=Unsupervised+Scale-consistent+Depth+Learning+from+Video)
 - TLDR: Enforces cross-frame scale-consistency losses so unsupervised monocular depth predictions retain a stable metric scale across long video sequences.
 
 ---
