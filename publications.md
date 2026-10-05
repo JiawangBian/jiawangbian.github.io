@@ -1,9 +1,9 @@
-### SoL-Pi: Scaling Auto-Research Loops for Efficient Agent Harnesses
+### SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness
 ![SoL-Pi](assets/images/publications/sol_pi.png)
 
 - Authors: H. Liu, T. Ye, S. Gao, Q. Cao, Y. Li, M. Zhuge, D. Wang, R. Zhang, **J.-W. Bian**, L. Zhu, L. Zhu, E. Xie, S. Han
 - Venue: arXiv, 2026
-- Links: [Project](https://nvlabs.github.io/SoL-Pi/) | [arXiv](https://arxiv.org/abs/2609.20519) | [Code](https://github.com/NVlabs/SoL-Pi) | [Scholar](https://scholar.google.com/scholar?q=SoL-Pi+Scaling+Auto-Research+Loops+for+Efficient+Agent+Harnesses)
+- Links: [Project](https://nvlabs.github.io/SoL-Pi/) | [arXiv](https://arxiv.org/abs/2609.20519) | [Code](https://github.com/NVlabs/SoL-Pi) | [Scholar](https://scholar.google.com/scholar?q=SoL-Pi+Recursively+Scaling+Auto-Research+Loops+for+Efficient+Agent+Harness)
 - TLDR: An automated pipeline that recursively discovers and validates mechanisms for improving coding-agent harnesses, surfacing four mechanisms that cut inference cost while preserving task performance.
 
 ---
@@ -35,6 +35,16 @@
 - Venue: European Conference on Computer Vision (ECCV), 2026
 - Links: [arXiv](https://arxiv.org/abs/2603.16099) | [Code](https://github.com/SensenGao/OneWorld) | [Scholar](https://scholar.google.com/scholar?q=OneWorld+Taming+Scene+Generation+3D+Unified+Representation+Autoencoder)
 - TLDR: A 3D unified representation autoencoder for coherent multi-view scene generation with cross-view consistency and reduced train-inference discrepancy.
+
+---
+
+### VolSplat: Rethinking Feed-Forward 3D Gaussian Splatting with Voxel-Aligned Prediction
+![VolSplat](assets/images/publications/volsplat.png)
+
+- Authors: W. Wang, Y. Chen, Z. Zhang, H. Liu, H. Wang, Z. Feng, W. Qin, F. Chen, **J.-W. Bian**, Z. Zhu, D. Chen, B. Zhuang
+- Venue: European Conference on Computer Vision (ECCV), 2026
+- Links: [Project](https://lhmd.top/volsplat) | [arXiv](https://arxiv.org/abs/2509.19297) | [Code](https://github.com/ziplab/VolSplat) | [Scholar](https://scholar.google.com/scholar?q=VolSplat+Rethinking+Feed-Forward+3D+Gaussian+Splatting+with+Voxel-Aligned+Prediction)
+- TLDR: Replaces pixel-aligned Gaussians with voxel-aligned prediction from a 3D voxel grid, avoiding error-prone 2D feature matching and enabling adaptive Gaussian density for more consistent feed-forward 3DGS.
 
 ---
 
