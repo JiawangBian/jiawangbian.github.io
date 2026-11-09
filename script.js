@@ -384,7 +384,7 @@ function createPublicationElement(publication) {
 
 function renderInlineMarkdown(text) {
     return text
-        .replace(/\\\*/g, '*')
+        .replace(/\\\*/g, '&#42;')
         .replace(/`([^`]+)`/g, '<code>$1</code>')
         .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
         .replace(/\*([^*]+)\*/g, '<em>$1</em>')
@@ -493,7 +493,7 @@ function generateBibtex(pub) {
 }
 
 function extractFirstAuthorLast(authorsMd) {
-    const plain = authorsMd ? authorsMd.replace(/\*|\**/g, '').replace(/<[^>]+>/g, '') : '';
+    const plain = authorsMd ? authorsMd.replace(/\\?\*/g, '').replace(/<[^>]+>/g, '') : '';
     const first = plain.split(/,|;| and /i)[0] || '';
     const parts = first.trim().split(/\s|\.-/).filter(Boolean);
     return (parts[parts.length - 1] || 'author').toLowerCase();
@@ -501,7 +501,7 @@ function extractFirstAuthorLast(authorsMd) {
 
 function authorsToBibtex(authorsMd) {
     if (!authorsMd) return '';
-    const cleaned = authorsMd.replace(/\*|\**/g, '').replace(/<[^>]+>/g, '');
+    const cleaned = authorsMd.replace(/\\?\*/g, '').replace(/<[^>]+>/g, '');
     const parts = cleaned.split(/,|;| and /i).map(s => s.trim()).filter(Boolean);
     return parts.join(' and ');
 }

@@ -1,3 +1,13 @@
+### Open-H3-Regenerate-2K: High-Resolution Video Refinement with Few-Step Diffusion
+![Open-H3-Regenerate-2K](assets/images/publications/open_h3_regenerate_2k.jpg)
+
+- Authors: S. Gao\*, H. Liu\*, Y. Li, H. Li, T. Ye, **J.-W. Bian**, S. Han, E. Xie
+- Venue: Open-source project, 2026
+- Links: [Project](https://nvlabs.github.io/Sana/Open-H3-Regenerate-2K/) | [Code](https://github.com/NVlabs/Sana/tree/sol-engine/models/Open-H3-Regenerate-2K)
+- TLDR: An open video refiner that turns low-resolution H3 drafts into 2K/4K video with a single LoRA on the frozen H3 model and only three diffusion steps, about 5x faster than the official regeneration API.
+
+---
+
 ### SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness
 ![SoL-Pi](assets/images/publications/sol_pi.png)
 
