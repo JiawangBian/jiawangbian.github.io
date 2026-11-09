@@ -3,8 +3,8 @@
 
 - Authors: H. Liu, T. Ye, S. Xue, S. Gao, Y. Li, J. Chen, H. Li, J. Yu, D. Wang, R. Zhang, L. Zhu, **J.-W. Bian**, S. Han, E. Xie
 - Venue: arXiv, 2026
-- Links: [Project](https://nvlabs.github.io/Sana/Sol-Refiner/) | [arXiv](https://arxiv.org/abs/2609.37969) | [Code](https://github.com/NVlabs/Sana/tree/sol-engine/models/sol-refiner) | [Scholar](https://scholar.google.com/scholar?q=SoL-Refiner+Speed-of-Light+One-Step+Refinement+for+High-Resolution+Video)
-- TLDR: A one-step video refiner that turns low-resolution generations into 4K video, trained with high-resolution continual training, RL post-training and one-step distillation; it beats external refiners on Refiner-Bench and runs 8.91x faster than its multi-step base.
+- Links: [Project](https://nvlabs.github.io/Sana/Sol-Refiner/) | [arXiv](https://arxiv.org/abs/2609.37969) | [Code](https://github.com/NVlabs/Sana/tree/sol-engine/models/sol-refiner) | [Open-H3-Regenerate-2K](https://nvlabs.github.io/Sana/Open-H3-Regenerate-2K/) | [Scholar](https://scholar.google.com/scholar?q=SoL-Refiner+Speed-of-Light+One-Step+Refinement+for+High-Resolution+Video)
+- TLDR: A one-step video refiner that turns low-resolution generations into 4K video and runs 8.91x faster than multi-step refinement. It integrates our Open-H3-Regenerate-2K, the MiniMax H3 refiner that produces 2K video in three steps and is preferred over the official H3 2K API in 87% of user-study judgments.
 
 ---
 
