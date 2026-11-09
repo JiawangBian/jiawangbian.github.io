@@ -154,12 +154,13 @@ async function loadPublications() {
         const markdown = await response.text();
         let publications = parsePublications(markdown);
 
-        // Sort by year (desc) extracted from venue; items without year go last
+        // Sort by year (desc) extracted from venue; items without year go last.
+        // Within a year, papers where I am the last author come first.
         publications = publications.sort((a, b) => {
             const ya = extractYearFromVenue(a.venue);
             const yb = extractYearFromVenue(b.venue);
-            if (ya === yb) return 0;
-            return (yb || -1) - (ya || -1);
+            if (ya !== yb) return (yb || -1) - (ya || -1);
+            return isLastAuthor(b.authors) - isLastAuthor(a.authors);
         });
 
         if (!publications.length) {
@@ -402,6 +403,11 @@ window.addEventListener('DOMContentLoaded', loadPublications);
 // ============================================
 // Enhancements: filters, enrich, UI rendering
 // ============================================
+
+function isLastAuthor(authorsMd) {
+    const authors = (authorsMd || '').split(',');
+    return /J\.-W\. Bian/.test(authors[authors.length - 1]) ? 1 : 0;
+}
 
 function extractYearFromVenue(venue) {
     if (!venue) return null;
