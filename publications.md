@@ -1,23 +1,3 @@
-### DynThinker: Unifying Static 3D and Dynamic 4D Spatial Reasoning
-![DynThinker](assets/images/publications/dynthinker.png)
-
-- Authors: Q. Cao, H. Li, Z. Guo, S. Gao, Z. Gao, H. Zhang, F. He, J. Han, H. Xu, X. Liang, **J.-W. Bian**
-- Venue: arXiv, 2026
-- Links: [arXiv](https://arxiv.org/abs/2610.20598) | [Scholar](https://scholar.google.com/scholar?q=DynThinker+Unifying+Static+3D+and+Dynamic+4D+Spatial+Reasoning)
-- TLDR: A unified VLM that strengthens static 3D and dynamic 4D spatial reasoning together, using decoupled EMA to curb interference between the two and fusing priors from a dynamic geometry encoder; it achieves the best average across nine 3D and 4D benchmarks.
-
----
-
-### GeoThinker-F: Endogenous Predictive World Representations for Fast Spatial Intelligence
-![GeoThinker-F](assets/images/publications/geothinker_f.png)
-
-- Authors: H. Li, Q. Cao, H. Zhou, X. Hu, S. Chen, Z. Guo, K. Xiang, Y. Nie, T. Tang, X. Zheng, **J.-W. Bian**, X. Liu, X. Liang
-- Venue: arXiv, 2026
-- Links: [arXiv](https://arxiv.org/abs/2610.20592) | [Scholar](https://scholar.google.com/scholar?q=GeoThinker-F+Endogenous+Predictive+World+Representations+for+Fast+Spatial+Intelligence)
-- TLDR: Lets a multimodal LLM predict its own geometry and future-frame representations instead of running an external 3D encoder, keeping strong spatial reasoning while cutting inference latency by up to 3.6x (1.45s to 0.40s).
-
----
-
 ### SoL-Refiner: Speed-of-Light One-Step Refinement for High-Resolution Video
 ![SoL-Refiner](assets/images/publications/sol_refiner.jpg)
 
