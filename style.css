@@ -443,6 +443,11 @@ a:hover {
     gap: 12px;
 }
 
+.news-text {
+    flex: 1;
+    min-width: 0;
+}
+
 .news-year {
     font-weight: 600;
     color: var(--color-primary);
