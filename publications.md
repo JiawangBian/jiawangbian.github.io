@@ -1,10 +1,10 @@
-### Open-H3-Regenerate-2K: High-Resolution Video Refinement with Few-Step Diffusion
-![Open-H3-Regenerate-2K](assets/images/publications/open_h3_regenerate_2k.jpg)
+### SoL-Refiner: Speed-of-Light One-Step Refinement for High-Resolution Video
+![SoL-Refiner](assets/images/publications/sol_refiner.jpg)
 
-- Authors: S. Gao\*, H. Liu\*, Y. Li, H. Li, T. Ye, **J.-W. Bian**, S. Han, E. Xie
-- Venue: Open-source project, 2026
-- Links: [Project](https://nvlabs.github.io/Sana/Open-H3-Regenerate-2K/) | [Code](https://github.com/NVlabs/Sana/tree/sol-engine/models/Open-H3-Regenerate-2K)
-- TLDR: An open video refiner that turns low-resolution H3 drafts into 2K/4K video with a single LoRA on the frozen H3 model and only three diffusion steps, about 5x faster than the official regeneration API.
+- Authors: H. Liu, T. Ye, S. Xue, S. Gao, Y. Li, J. Chen, H. Li, J. Yu, D. Wang, R. Zhang, L. Zhu, **J.-W. Bian**, S. Han, E. Xie
+- Venue: arXiv, 2026
+- Links: [Project](https://nvlabs.github.io/Sana/Sol-Refiner/) | [arXiv](https://arxiv.org/abs/2609.37969) | [Code](https://github.com/NVlabs/Sana/tree/sol-engine/models/sol-refiner) | [Scholar](https://scholar.google.com/scholar?q=SoL-Refiner+Speed-of-Light+One-Step+Refinement+for+High-Resolution+Video)
+- TLDR: A one-step video refiner that turns low-resolution generations into 4K video, trained with high-resolution continual training, RL post-training and one-step distillation; it beats external refiners on Refiner-Bench and runs 8.91x faster than its multi-step base.
 
 ---
 
