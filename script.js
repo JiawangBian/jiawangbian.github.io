@@ -248,6 +248,7 @@ function extractPublication(block) {
         image,
         authors: fields.authors || '',
         venue: fields.venue || '',
+        topic: fields.topic || '',
         summary: fields.tldr || fields['tl;dr'] || '',
         links
     };
@@ -426,6 +427,8 @@ function enrichPublications(publications) {
     });
 }
 
+const PUBLICATION_TOPICS = ['3D Reconstruction & Geometry', 'Generation', 'Understanding & Reasoning'];
+
 function renderPublicationsUI(container, publications) {
     const controls = document.createElement('div');
     controls.className = 'pub-filters';
@@ -468,8 +471,18 @@ function renderPublicationsUI(container, publications) {
             list.innerHTML = '<p class="publications-empty">No matching publications.</p>';
             return;
         }
+        // Group by topic in PUBLICATION_TOPICS order; untagged papers go last under "Other"
         const frag = document.createDocumentFragment();
-        filtered.forEach(pub => frag.appendChild(createPublicationElement(pub)));
+        const topics = PUBLICATION_TOPICS.concat(['Other']);
+        topics.forEach(topic => {
+            const group = filtered.filter(p => (PUBLICATION_TOPICS.includes(p.topic) ? p.topic : 'Other') === topic);
+            if (!group.length) return;
+            const heading = document.createElement('h3');
+            heading.className = 'pub-topic';
+            heading.textContent = topic;
+            frag.appendChild(heading);
+            group.forEach(pub => frag.appendChild(createPublicationElement(pub)));
+        });
         list.appendChild(frag);
     }
 
