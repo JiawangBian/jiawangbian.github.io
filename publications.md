@@ -112,7 +112,7 @@
 ![NoPe-NeRF](assets/images/publications/nope_nerf.png)
 
 - Authors: W. Bian, Z. Wang, K. Li, **J.-W. Bian**, V. A. Prisacariu
-- Venue: CVPR 2023
+- Venue: CVPR 2023 (Highlight)
 - Topic: 3D Reconstruction & Geometry
 - Links: [Project](https://nopenet.active.vision/) | [arXiv](https://arxiv.org/abs/2212.07388) | [Code](https://github.com/ActiveVisionLab/NoPe-NeRF) | [Scholar](https://scholar.google.com/scholar?q=NoPe-NeRF%3A+Optimising+Neural+Radiance+Field+with+No+Pose+Prior)
 - TLDR: Optimises NeRF and camera parameters jointly with a pose-free likelihood, removing the need for SfM pose initialisation on unordered photo collections.

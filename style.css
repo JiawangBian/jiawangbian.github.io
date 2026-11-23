@@ -501,6 +501,10 @@ a.nav-brand:hover {
     text-underline-offset: 3px;
 }
 
+.news-list-wide li {
+    grid-template-columns: 104px minmax(0, 1fr);
+}
+
 /* ============================================
    Publications
    ============================================ */
@@ -709,6 +713,14 @@ a.nav-brand:hover {
     line-height: 1.1;
     letter-spacing: -0.022em;
     color: var(--color-text-primary);
+}
+
+.page-lead {
+    max-width: 720px;
+    margin-top: 14px;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
 }
 
 .section-group h3,
