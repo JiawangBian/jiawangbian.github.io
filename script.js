@@ -436,7 +436,7 @@ function enrichPublications(publications) {
     });
 }
 
-const PUBLICATION_TOPICS = ['3D Reconstruction & Geometry', 'Generation', 'Understanding & Reasoning'];
+const PUBLICATION_TOPICS = ['Geometry from Video', 'Neural 3D Reconstruction', 'World Generation', 'Spatial Reasoning & Agents'];
 
 function renderPublicationsUI(container, publications) {
     const controls = document.createElement('div');
