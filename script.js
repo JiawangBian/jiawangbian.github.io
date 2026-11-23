@@ -316,6 +316,12 @@ function createPublicationElement(publication) {
         const venue = document.createElement('p');
         venue.className = 'pub-venue';
         venue.innerHTML = renderInlineMarkdown(publication.venue);
+        if (publication.topic) {
+            const tag = document.createElement('span');
+            tag.className = 'pub-topic-tag';
+            tag.textContent = publication.topic;
+            venue.appendChild(tag);
+        }
         content.appendChild(venue);
     }
 
@@ -447,9 +453,14 @@ function renderPublicationsUI(container, publications) {
     typeSelect.className = 'pub-type';
     typeSelect.innerHTML = '<option value="">All types</option><option value="Conference">Conference</option><option value="Journal">Journal</option>';
 
+    const topicSelect = document.createElement('select');
+    topicSelect.className = 'pub-topic-filter';
+    topicSelect.innerHTML = ['<option value="">All topics</option>'].concat(PUBLICATION_TOPICS.map(t => `<option value="${t}">${t}</option>`)).join('');
+
     controls.appendChild(search);
     controls.appendChild(yearSelect);
     controls.appendChild(typeSelect);
+    controls.appendChild(topicSelect);
 
     const list = document.createElement('div');
     list.className = 'pub-list';
@@ -458,12 +469,14 @@ function renderPublicationsUI(container, publications) {
         const q = (search.value || '').trim().toLowerCase();
         const y = yearSelect.value;
         const t = typeSelect.value;
+        const topic = topicSelect.value;
 
         const filtered = publications.filter(p => {
             const matchQ = !q || [p.title, p.authors, p.venue].join(' ').toLowerCase().includes(q);
             const matchY = !y || p.year === y;
             const matchT = !t || p.type === t;
-            return matchQ && matchY && matchT;
+            const matchTopic = !topic || p.topic === topic;
+            return matchQ && matchY && matchT && matchTopic;
         });
 
         list.innerHTML = '';
@@ -471,24 +484,15 @@ function renderPublicationsUI(container, publications) {
             list.innerHTML = '<p class="publications-empty">No matching publications.</p>';
             return;
         }
-        // Group by topic in PUBLICATION_TOPICS order; untagged papers go last under "Other"
         const frag = document.createDocumentFragment();
-        const topics = PUBLICATION_TOPICS.concat(['Other']);
-        topics.forEach(topic => {
-            const group = filtered.filter(p => (PUBLICATION_TOPICS.includes(p.topic) ? p.topic : 'Other') === topic);
-            if (!group.length) return;
-            const heading = document.createElement('h3');
-            heading.className = 'pub-topic';
-            heading.textContent = topic;
-            frag.appendChild(heading);
-            group.forEach(pub => frag.appendChild(createPublicationElement(pub)));
-        });
+        filtered.forEach(pub => frag.appendChild(createPublicationElement(pub)));
         list.appendChild(frag);
     }
 
     search.addEventListener('input', applyFilters);
     yearSelect.addEventListener('change', applyFilters);
     typeSelect.addEventListener('change', applyFilters);
+    topicSelect.addEventListener('change', applyFilters);
 
     container.innerHTML = '';
     container.appendChild(controls);
