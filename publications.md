@@ -34,7 +34,7 @@
 ### SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness
 ![SoL-Pi](assets/images/publications/sol_pi.png)
 
-- Authors: H. Liu, T. Ye, S. Gao, Q. Cao, Y. Li, M. Zhuge, D. Wang, R. Zhang, **J.-W. Bian**, L. Zhu, L. Zhu, E. Xie, S. Han
+- Authors: H. Liu, T. Ye, S. Gao, Q. Cao, Y. Li, M. Zhuge, D. Wang, R. Zhang, P. Luo, **J.-W. Bian**, L. Zhu, L. Zhu, E. Xie, S. Han
 - Venue: arXiv 2026
 - Topic: Spatial Reasoning & Agents
 - Links: [Project](https://nvlabs.github.io/SoL-Pi/) | [arXiv](https://arxiv.org/abs/2609.20519) | [Code](https://github.com/NVlabs/SoL-Pi) | [Scholar](https://scholar.google.com/scholar?q=SoL-Pi+Recursively+Scaling+Auto-Research+Loops+for+Efficient+Agent+Harness)
