@@ -1,3 +1,13 @@
+### DynThinker: Unifying Static 3D and Dynamic 4D Spatial Reasoning
+![DynThinker](assets/images/publications/dynthinker.png)
+
+- Authors: Q. Cao, H. Li, Z. Guo, S. Gao, Z. Gao, H. Zhang, F. He, J. Han, H. Xu, X. Liang, **J.-W. Bian**
+- Venue: arXiv, 2026
+- Links: [arXiv](https://arxiv.org/abs/2610.20598) | [Scholar](https://scholar.google.com/scholar?q=DynThinker+Unifying+Static+3D+and+Dynamic+4D+Spatial+Reasoning)
+- TLDR: A unified VLM that strengthens static 3D and dynamic 4D spatial reasoning together, using decoupled EMA to curb interference between the two and fusing priors from a dynamic geometry encoder; it achieves the best average across nine 3D and 4D benchmarks.
+
+---
+
 ### SoL-Refiner: Speed-of-Light One-Step Refinement for High-Resolution Video
 ![SoL-Refiner](assets/images/publications/sol_refiner.jpg)
 
