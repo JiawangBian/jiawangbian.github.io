@@ -45,7 +45,7 @@
 ### PixWorld: Unifying 3D Scene Generation and Reconstruction in Pixel Space
 ![PixWorld](assets/images/publications/pixworld.png)
 
-- Authors: S. Gao, Z. Wang, Q. Cao, D. Yu, C. Wang, **J.-W. Bian**
+- Authors: S. Gao, Z. Wang, Q. Cao, D. Yu, C. Wang, **J.-W. Bian**†
 - Venue: arXiv 2026
 - Topic: Generation
 - Links: [Project](https://sensengao.github.io/PixWorld/) | [arXiv](https://arxiv.org/abs/2607.05373) | [Code](https://github.com/SensenGao/PixWorld) | [Scholar](https://scholar.google.com/scholar?q=PixWorld+Unifying+3D+Scene+Generation+and+Reconstruction+in+Pixel+Space)
@@ -56,7 +56,7 @@
 ### OneWorld: Taming Scene Generation with 3D Unified Representation Autoencoder
 ![OneWorld](assets/images/publications/one_world.png)
 
-- Authors: S. Gao, Z. Wang, Q. Cao, D. Yu, C. Wang, T. Liu, M. Gong, **J.-W. Bian**
+- Authors: S. Gao, Z. Wang, Q. Cao, D. Yu, C. Wang, T. Liu, M. Gong, **J.-W. Bian**†
 - Venue: ECCV 2026
 - Topic: Generation
 - Links: [arXiv](https://arxiv.org/abs/2603.16099) | [Code](https://github.com/SensenGao/OneWorld) | [Scholar](https://scholar.google.com/scholar?q=OneWorld+Taming+Scene+Generation+3D+Unified+Representation+Autoencoder)
