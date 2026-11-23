@@ -1,3 +1,14 @@
+### Scalable Adaptation of 3D Geometric Foundation Models via Weak Supervision from Internet Video
+![SAGE](assets/images/publications/sage.png)
+
+- Authors: Z. Gao, K. Liu, D. Y. Chen, D. Shi, G. Lin, **J.-W. Bian**, H. Chen, C. Shen
+- Venue: NeurIPS 2026
+- Topic: 3D Reconstruction & Geometry
+- Links: [arXiv](https://arxiv.org/abs/2602.07891) | [Code](https://github.com/aim-uofa/SAGE) | [Scholar](https://scholar.google.com/scholar?q=Scalable+Adaptation+of+3D+Geometric+Foundation+Models+via+Weak+Supervision+from+Internet+Video)
+- TLDR: Scales 3D geometric foundation models with raw Internet videos instead of 3D labels, mining training trajectories with sparse SfM anchors and dense rendering consistency; cuts Chamfer distance by 20-42% on unseen benchmarks for MV-DUSt3R and consistently improves VGGT.
+
+---
+
 ### DynThinker: Unifying Static 3D and Dynamic 4D Spatial Reasoning
 ![DynThinker](assets/images/publications/dynthinker.png)
 
@@ -42,17 +53,6 @@
 
 ---
 
-### Feed-Forward 3D Scene Modeling: A Problem-Driven Perspective
-![FF3D Survey](assets/images/publications/ff3d_survey.png)
-
-- Authors: W. Wang, Q. Cao, S. Gao, D. Chen, H. Xu, W. Bian, S. Peng, T. Cham, C. Zheng, A. Geiger, J. Cai, **J.-W. Bian**, B. Zhuang
-- Venue: arXiv 2026
-- Topic: 3D Reconstruction & Geometry
-- Links: [Project](https://ff3d-survey.github.io) | [arXiv](https://arxiv.org/abs/2604.14025) | [Code](https://github.com/ziplab/Awesome-Feed-Forward-3D) | [Scholar](https://scholar.google.com/scholar?q=Feed-Forward+3D+Scene+Modeling+A+Problem-Driven+Perspective)
-- TLDR: A survey of feed-forward 3D scene reconstruction methods, organized around five core design problems: feature enhancement, geometry awareness, model efficiency, augmentation, and temporal modeling.
-
----
-
 ### OneWorld: Taming Scene Generation with 3D Unified Representation Autoencoder
 ![OneWorld](assets/images/publications/one_world.png)
 
@@ -75,21 +75,10 @@
 
 ---
 
-### Taming Camera-Controlled Video Generation with Verifiable Geometry Reward
-![Taming Camera](assets/images/publications/taming_camera.png)
-
-- Authors: Z. Wang, X. Xia, Z. Bie, J. Liu, D. Yu, **J.-W. Bian**, C. Wang
-- Venue: ECCV 2026
-- Topic: Generation
-- Links: [arXiv](https://arxiv.org/abs/2512.02870) | [Scholar](https://scholar.google.com/scholar?q=Taming+Camera-Controlled+Video+Generation+with+Verifiable+Geometry+Reward)
-- TLDR: An online RL post-training framework that uses verifiable geometry rewards with dense segment-level feedback to improve camera trajectory control in video diffusion models.
-
----
-
 ### SurfaceSplat: Connecting Surface Reconstruction and Gaussian Splatting
 ![SurfaceSplat](assets/images/publications/surface_splat.png)
 
-- Authors: Z. Gao, **J.-W. Bian**, G. Lin, H. Chen, C. Shen
+- Authors: Z. Gao\*, **J.-W. Bian**\*, G. Lin, H. Chen, C. Shen
 - Venue: ICCV 2025
 - Topic: 3D Reconstruction & Geometry
 - Links: [arXiv](https://arxiv.org/abs/2507.15602) | [Code](https://github.com/Gaozihui/SurfaceSplat) | [Scholar](https://scholar.google.com/scholar?q=SurfaceSplat%3A+Connecting+Surface+Reconstruction+and+Gaussian+Splatting)
@@ -97,21 +86,10 @@
 
 ---
 
-### Manydepth2: Motion-aware Self-supervised Monocular Depth Estimation in Dynamic Scenes
-![Manydepth2](assets/images/publications/manydepth2.png)
-
-- Authors: K. Zhou, **J.-W. Bian**, J.-Q. Zheng, J. Zhong, Q. Xie, N. Trigoni, A. Markham
-- Venue: RA-L 2025
-- Topic: 3D Reconstruction & Geometry
-- Links: [Paper](https://doi.org/10.1109/LRA.2025.3568337) | [Code](https://github.com/kaichen-z/Manydepth2) | [Scholar](https://scholar.google.com/scholar?q=Manydepth2%3A+Motion-aware+Self-supervised+Monocular+Depth+Estimation+in+Dynamic+Scenes)
-- TLDR: Couples learned motion masks with temporal flow cues so self-supervised monocular depth stays stable on highly dynamic street scenes.
-
----
-
 ### GaussCtrl: Multi-View Consistent Text-Driven 3D Gaussian Splatting Editing
 ![GaussCtrl](assets/images/publications/gaussctrl.png)
 
-- Authors: J. Wu, **J.-W. Bian**, X. Li, G. Wang, I. Reid, P. Torr, V. Prisacariu
+- Authors: J. Wu\*, **J.-W. Bian**\*, X. Li, G. Wang, I. Reid, P. Torr, V. Prisacariu
 - Venue: ECCV 2024
 - Topic: Generation
 - Links: [Project](https://gaussctrl.active.vision/) | [arXiv](https://arxiv.org/abs/2403.08733) | [Code](https://github.com/ActiveVisionLab/gaussctrl) | [Scholar](https://scholar.google.com/scholar?q=GaussCtrl%3A+Multi-View+Consistent+Text-Driven+3D+Gaussian+Splatting+Editing)
@@ -141,21 +119,10 @@
 
 ---
 
-### MobileBrick: Building LEGO for 3D Reconstruction on Mobile Devices
-![MobileBrick](assets/images/publications/mobilebrick.png)
-
-- Authors: K. Li, **J.-W. Bian**, R. Castle, P. Torr, V. A. Prisacariu
-- Venue: CVPR 2023
-- Topic: 3D Reconstruction & Geometry
-- Links: [Project](https://code.active.vision/MobileBrick/) | [arXiv](https://arxiv.org/abs/2303.01932) | [Code](https://github.com/ActiveVisionLab/MobileBrick) | [Scholar](https://scholar.google.com/scholar?q=MobileBrick%3A+Building+LEGO+for+3D+Reconstruction+on+Mobile+Devices)
-- TLDR: Introduces a phone-based capture rig and lightweight optimiser that turns casual handheld footage into LEGO-style 3D assets entirely on-device.
-
----
-
 ### SC-DepthV3: Robust Self-supervised Monocular Depth Estimation for Dynamic Scenes
 ![SC-DepthV3](assets/images/publications/sc_depthv3.png)
 
-- Authors: L. Sun, **J.-W. Bian**, H. Zhan, W. Yin, I. Reid, C. Shen
+- Authors: L. Sun\*, **J.-W. Bian**\*, H. Zhan, W. Yin, I. Reid, C. Shen
 - Venue: TPAMI 2023
 - Topic: 3D Reconstruction & Geometry
 - Links: [arXiv](https://arxiv.org/abs/2211.03660) | [Code](https://github.com/JiawangBian/sc_depth_pl) | [Scholar](https://scholar.google.com/scholar?q=SC-DepthV3%3A+Robust+Self-supervised+Monocular+Depth+Estimation+for+Dynamic+Scenes)

@@ -515,6 +515,12 @@ a:hover {
     color: #dc2626;
 }
 
+.pub-note {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin: -8px 0 16px;
+}
+
 .publication {
     display: grid;
     grid-template-columns: 220px 1fr;
