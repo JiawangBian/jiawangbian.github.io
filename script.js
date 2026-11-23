@@ -436,7 +436,13 @@ function enrichPublications(publications) {
     });
 }
 
-const PUBLICATION_TOPICS = ['Geometry from Video', 'Neural 3D Reconstruction', 'World Generation', 'Spatial Reasoning & Agents'];
+// Research areas, in the order they are shown as tabs above the list
+const PUBLICATION_TOPICS = [
+    { name: 'Geometry from Video', blurb: 'Learning depth, camera motion, and 3D structure from video, without 3D labels.' },
+    { name: 'Neural 3D Reconstruction', blurb: 'Reconstructing scenes with NeRF and Gaussian splatting: pose-free, surface-accurate, and feed-forward.' },
+    { name: 'World Generation', blurb: 'Generating and editing consistent 3D scenes and videos with diffusion models.' },
+    { name: 'Spatial Reasoning & Agents', blurb: 'Enabling multimodal LLMs to reason about 3D and 4D scenes, and building efficient AI agents.' }
+];
 
 function renderPublicationsUI(container, publications) {
     const controls = document.createElement('div');
@@ -456,14 +462,32 @@ function renderPublicationsUI(container, publications) {
     typeSelect.className = 'pub-type';
     typeSelect.innerHTML = '<option value="">All types</option><option value="Conference">Conference</option><option value="Journal">Journal</option>';
 
-    const topicSelect = document.createElement('select');
-    topicSelect.className = 'pub-topic-filter';
-    topicSelect.innerHTML = ['<option value="">All topics</option>'].concat(PUBLICATION_TOPICS.map(t => `<option value="${t}">${t}</option>`)).join('');
+    // Research areas as tabs; the active one shows a one-line description
+    let activeTopic = '';
+    const topicTabs = document.createElement('div');
+    topicTabs.className = 'pub-topics';
+    topicTabs.setAttribute('role', 'group');
+    topicTabs.setAttribute('aria-label', 'Research area');
+    const topicBlurb = document.createElement('p');
+    topicBlurb.className = 'pub-topic-blurb';
+
+    [{ name: '', label: 'All' }].concat(PUBLICATION_TOPICS).forEach(t => {
+        const count = t.name ? publications.filter(p => p.topic === t.name).length : publications.length;
+        const tab = document.createElement('button');
+        tab.type = 'button';
+        tab.className = 'pub-topic-tab';
+        tab.dataset.topic = t.name;
+        tab.innerHTML = `${(t.label || t.name).replace('&', '&amp;')} <span class="pub-topic-count">${count}</span>`;
+        tab.addEventListener('click', () => {
+            activeTopic = t.name;
+            applyFilters();
+        });
+        topicTabs.appendChild(tab);
+    });
 
     controls.appendChild(search);
     controls.appendChild(yearSelect);
     controls.appendChild(typeSelect);
-    controls.appendChild(topicSelect);
 
     const list = document.createElement('div');
     list.className = 'pub-list';
@@ -472,7 +496,15 @@ function renderPublicationsUI(container, publications) {
         const q = (search.value || '').trim().toLowerCase();
         const y = yearSelect.value;
         const t = typeSelect.value;
-        const topic = topicSelect.value;
+        const topic = activeTopic;
+        topicTabs.querySelectorAll('.pub-topic-tab').forEach(tab => {
+            const on = tab.dataset.topic === topic;
+            tab.classList.toggle('active', on);
+            tab.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        const current = PUBLICATION_TOPICS.find(t => t.name === topic);
+        topicBlurb.textContent = current ? current.blurb : '';
+        topicBlurb.hidden = !current;
 
         const filtered = publications.filter(p => {
             const matchQ = !q || [p.title, p.authors, p.venue].join(' ').toLowerCase().includes(q);
@@ -495,10 +527,11 @@ function renderPublicationsUI(container, publications) {
     search.addEventListener('input', applyFilters);
     yearSelect.addEventListener('change', applyFilters);
     typeSelect.addEventListener('change', applyFilters);
-    topicSelect.addEventListener('change', applyFilters);
 
     container.innerHTML = '';
+    container.appendChild(topicTabs);
     container.appendChild(controls);
+    container.appendChild(topicBlurb);
     container.appendChild(list);
     applyFilters();
 }
@@ -551,15 +584,3 @@ function fallbackCopy(text) {
     try { document.execCommand('copy'); } catch (e) {}
     document.body.removeChild(textarea);
 }
-
-// ============================================
-// Research areas: jump to the publication list filtered by topic
-// ============================================
-document.addEventListener('click', (e) => {
-    const link = e.target.closest('a[data-topic]');
-    if (!link) return;
-    const select = document.querySelector('.pub-topic-filter');
-    if (!select) return;
-    select.value = link.dataset.topic;
-    select.dispatchEvent(new Event('change'));
-});
