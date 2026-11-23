@@ -78,16 +78,6 @@
 
 ---
 
-### Thinking with Geometry: Active Geometry Integration for Spatial Reasoning
-![GeoThinker](assets/images/publications/thinking_with_geometry.png)
-
-- Authors: H. Li, Q. Cao, T. Tang, K. Xiang, Z. Guo, J. Han, H. Xu, **J.-W. Bian**, X. Liang
-- Venue: International Conference on Machine Learning (ICML), 2026
-- Links: [arXiv](https://arxiv.org/abs/2602.06037) | [Code](https://github.com/Li-Hao-yuan/GeoThinker) | [Scholar](https://scholar.google.com/scholar?q=Thinking+with+Geometry+Active+Geometry+Integration+Spatial+Reasoning)
-- TLDR: GeoThinker enables multimodal LLMs to actively retrieve and integrate geometric information for spatial reasoning, achieving state-of-the-art on VSI-Bench.
-
----
-
 ### SurfaceSplat: Connecting Surface Reconstruction and Gaussian Splatting
 ![SurfaceSplat](assets/images/publications/surface_splat.png)
 
