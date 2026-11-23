@@ -12,7 +12,7 @@
 ### DynThinker: Unifying Static 3D and Dynamic 4D Spatial Reasoning
 ![DynThinker](assets/images/publications/dynthinker.png)
 
-- Authors: Q. Cao, H. Li, Z. Guo, S. Gao, Z. Gao, H. Zhang, F. He, J. Han, H. Xu, X. Liang, **J.-W. Bian**
+- Authors: Q. Cao, H. Li, Z. Guo, S. Gao, Z. Gao, H. Zhang, F. He, J. Han, H. Xu, X. Liang, **J.-W. Bian**†
 - Venue: arXiv 2026
 - Topic: Understanding & Reasoning
 - Links: [arXiv](https://arxiv.org/abs/2610.20598) | [Scholar](https://scholar.google.com/scholar?q=DynThinker+Unifying+Static+3D+and+Dynamic+4D+Spatial+Reasoning)
