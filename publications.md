@@ -1,7 +1,7 @@
 ### Scalable Adaptation of 3D Geometric Foundation Models via Weak Supervision from Internet Video
 ![SAGE](assets/images/publications/sage.png)
 
-- Authors: Z. Gao, K. Liu, D. Y. Chen, D. Shi, G. Lin, **J.-W. Bian**, H. Chen, C. Shen
+- Authors: Z. Gao, K. Liu, D. Y. Chen, D. Shi, G. Lin, **J.-W. Bian**†, H. Chen, C. Shen
 - Venue: NeurIPS 2026
 - Topic: 3D Reconstruction & Geometry
 - Links: [arXiv](https://arxiv.org/abs/2602.07891) | [Code](https://github.com/aim-uofa/SAGE) | [Scholar](https://scholar.google.com/scholar?q=Scalable+Adaptation+of+3D+Geometric+Foundation+Models+via+Weak+Supervision+from+Internet+Video)
