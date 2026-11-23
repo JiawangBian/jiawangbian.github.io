@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400..600&display=swap">
-    <link rel="stylesheet" href="style.css?v=20261123g">
+    <link rel="stylesheet" href="style.css?v=20261123h">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css">
@@ -86,9 +86,8 @@
                     <img src="bjw_square.png" alt="Jiawang Bian" fetchpriority="high">
                 </div>
 
-                <!-- Right: Info (Two columns) -->
+                <!-- Right: Info -->
                 <div class="about-info">
-                    <!-- Left column: Basic info -->
                     <div class="info-column">
                         <h1>Jiawang Bian</h1>
                         <p class="title">Nanyang Assistant Professor &amp; NRF AI Fellow</p>
@@ -108,17 +107,6 @@
                             <a class="cv-link" href="cv-bjw.pdf" target="_blank" rel="noopener" title="Curriculum Vitae"><i class="fas fa-file-pdf"></i> CV</a>
                         </div>
                     </div>
-
-                    <!-- Right column: Research Interests -->
-                    <div class="info-column">
-                        <h3>Research interests</h3>
-                        <ul class="interests-list">
-                            <li>3D/4D Reconstruction</li>
-                            <li>Generative AI</li>
-                            <li>World Models</li>
-                            <li>Vision-Language Models</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
 
@@ -128,8 +116,7 @@
                     I am a Nanyang Assistant Professor in the <a href="https://www.ntu.edu.sg/computing"
                         target="_blank" rel="noopener">College of Computing and Data Science</a> at <a href="https://www.ntu.edu.sg/"
                         target="_blank" rel="noopener">Nanyang Technological University (NTU)</a>, where I lead the <a href="group.html">Spatial Intelligence Lab</a>.
-                    My research focuses on <strong>spatial intelligence</strong>, with the goal of enabling AI to perceive, understand, and interact with the physical world.
-                    It spans 3D/4D reconstruction, generative AI, world models, and vision-language models, with applications in autonomous driving, AR/VR, and robotics.
+                    My research focuses on <strong>spatial intelligence</strong>: enabling AI to perceive, understand, and interact with the physical world, with applications in autonomous driving, AR/VR, and robotics.
                 </p>
                 <p>
                     Previously, I was a Research Scientist at <a href="https://www.bytedance.com/"
@@ -148,7 +135,7 @@
                 <div class="recruitment">
                     <p class="eyebrow">Openings</p>
                     <p>
-                        The Spatial Intelligence Lab has openings for <span class="highlight-red">PhD students, Postdocs, RAs, and Visiting Students</span> who are excited about 3D vision, generative models, and spatial reasoning. If that sounds like you, please email me your CV.
+                        We are looking for <span class="highlight-red">PhD students, Postdocs, RAs, and Visiting Students</span> to join the Spatial Intelligence Lab. If you are interested, please email me your CV.
                     </p>
                     <p class="recruitment-note">
                         We receive many applications and may not be able to reply to everyone. Applicants are expected to have <span class="highlight-red">at least one first-author paper at a top-tier conference</span> in an area close to the lab's research.
@@ -163,27 +150,23 @@
             <div class="research-grid">
                 <div class="research-area">
                     <h3>Geometry from Video</h3>
-                    <p>Learning depth, camera motion, and 3D structure directly from video, without 3D labels: from self-supervised depth estimation to scaling geometric foundation models with Internet video.</p>
-                    <p class="research-works"><a href="https://arxiv.org/abs/2105.11610" target="_blank" rel="noopener">SC-Depth</a>, <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Bian_GMS_Grid-based_Motion_CVPR_2017_paper.pdf" target="_blank" rel="noopener">GMS</a>, <a href="https://arxiv.org/abs/2602.07891" target="_blank" rel="noopener">SAGE</a></p>
-                    <a class="research-more" href="#publications" data-topic="Geometry from Video">All 5 papers &rarr;</a>
+                    <p>Learning depth, camera motion, and 3D structure from video, without 3D labels.</p>
+                    <p class="research-works"><a href="https://arxiv.org/abs/2105.11610" target="_blank" rel="noopener">SC-Depth</a>, <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Bian_GMS_Grid-based_Motion_CVPR_2017_paper.pdf" target="_blank" rel="noopener">GMS</a>, <a href="https://arxiv.org/abs/2602.07891" target="_blank" rel="noopener">SAGE</a> <a class="research-more" href="#publications" data-topic="Geometry from Video">all 5 &rarr;</a></p>
                 </div>
                 <div class="research-area">
                     <h3>Neural 3D Reconstruction</h3>
-                    <p>Reconstructing scenes with neural radiance fields and Gaussian splatting, covering pose-free optimisation, accurate surfaces, and feed-forward prediction.</p>
-                    <p class="research-works"><a href="https://nopenet.active.vision/" target="_blank" rel="noopener">NoPe-NeRF</a>, <a href="https://porf.active.vision/" target="_blank" rel="noopener">PoRF</a>, <a href="https://lhmd.top/volsplat" target="_blank" rel="noopener">VolSplat</a></p>
-                    <a class="research-more" href="#publications" data-topic="Neural 3D Reconstruction">All 4 papers &rarr;</a>
+                    <p>Reconstructing scenes with NeRF and Gaussian splatting: pose-free, surface-accurate, and feed-forward.</p>
+                    <p class="research-works"><a href="https://nopenet.active.vision/" target="_blank" rel="noopener">NoPe-NeRF</a>, <a href="https://porf.active.vision/" target="_blank" rel="noopener">PoRF</a>, <a href="https://lhmd.top/volsplat" target="_blank" rel="noopener">VolSplat</a> <a class="research-more" href="#publications" data-topic="Neural 3D Reconstruction">all 4 &rarr;</a></p>
                 </div>
                 <div class="research-area">
                     <h3>World Generation</h3>
-                    <p>Generating and editing 3D scenes and videos with diffusion models, with a focus on multi-view consistency and on unifying generation with reconstruction.</p>
-                    <p class="research-works"><a href="https://sensengao.github.io/PixWorld/" target="_blank" rel="noopener">PixWorld</a>, <a href="https://arxiv.org/abs/2603.16099" target="_blank" rel="noopener">OneWorld</a>, <a href="https://gaussctrl.active.vision/" target="_blank" rel="noopener">GaussCtrl</a>, <a href="https://nvlabs.github.io/Sana/Sol-Refiner/" target="_blank" rel="noopener">SoL-Refiner</a></p>
-                    <a class="research-more" href="#publications" data-topic="World Generation">All 4 papers &rarr;</a>
+                    <p>Generating and editing consistent 3D scenes and videos with diffusion models.</p>
+                    <p class="research-works"><a href="https://sensengao.github.io/PixWorld/" target="_blank" rel="noopener">PixWorld</a>, <a href="https://arxiv.org/abs/2603.16099" target="_blank" rel="noopener">OneWorld</a>, <a href="https://gaussctrl.active.vision/" target="_blank" rel="noopener">GaussCtrl</a>, <a href="https://nvlabs.github.io/Sana/Sol-Refiner/" target="_blank" rel="noopener">SoL-Refiner</a> <a class="research-more" href="#publications" data-topic="World Generation">all 4 &rarr;</a></p>
                 </div>
                 <div class="research-area">
                     <h3>Spatial Reasoning &amp; Agents</h3>
-                    <p>Teaching multimodal LLMs to reason about static 3D and dynamic 4D scenes, and building efficient agent systems.</p>
-                    <p class="research-works"><a href="https://arxiv.org/abs/2610.20598" target="_blank" rel="noopener">DynThinker</a>, <a href="https://nvlabs.github.io/SoL-Pi/" target="_blank" rel="noopener">SoL-Pi</a></p>
-                    <a class="research-more" href="#publications" data-topic="Spatial Reasoning &amp; Agents">All 2 papers &rarr;</a>
+                    <p>Enabling multimodal LLMs to reason about 3D and 4D scenes, and building efficient AI agents.</p>
+                    <p class="research-works"><a href="https://arxiv.org/abs/2610.20598" target="_blank" rel="noopener">DynThinker</a>, <a href="https://nvlabs.github.io/SoL-Pi/" target="_blank" rel="noopener">SoL-Pi</a> <a class="research-more" href="#publications" data-topic="Spatial Reasoning &amp; Agents">all 2 &rarr;</a></p>
                 </div>
             </div>
         </section>
@@ -192,25 +175,11 @@
         <section id="news" class="section-news reveal">
             <h2>News</h2>
             <ul class="news-list">
-                <li><span class="news-year">2026.09</span> <span class="news-text">Co-developed <a href="https://nvlabs.github.io/Sana/Sol-Refiner/" target="_blank" rel="noopener">SoL-Refiner</a> with NVIDIA, a one-step 4K video refiner; our <a href="https://nvlabs.github.io/Sana/Open-H3-Regenerate-2K/" target="_blank" rel="noopener">Open-H3-Regenerate-2K</a> is integrated as its MiniMax H3 refiner, preferred over the official H3 2K API in 87% of user judgments.</span></li>
-                <li><span class="news-year">2026.09</span> <span class="news-text">Co-developed <a href="https://nvlabs.github.io/SoL-Pi/" target="_blank" rel="noopener">SoL-Pi</a> with NVIDIA — cuts agent-harness cost by ~35% at 94% of baseline performance, now 3,600+ GitHub stars.</span></li>
-                <li><span class="news-year">2026.09</span> <span class="news-text">One paper accepted to NeurIPS 2026: <a href="https://arxiv.org/abs/2602.07891" target="_blank" rel="noopener">SAGE</a>, on scaling 3D geometric foundation models with Internet video.</span></li>
+                <li><span class="news-year">2026.09</span> <span class="news-text">Co-developed <a href="https://nvlabs.github.io/Sana/Sol-Refiner/" target="_blank" rel="noopener">SoL-Refiner</a> with NVIDIA, a one-step 4K video refiner that integrates our <a href="https://nvlabs.github.io/Sana/Open-H3-Regenerate-2K/" target="_blank" rel="noopener">Open-H3-Regenerate-2K</a>.</span></li>
+                <li><span class="news-year">2026.09</span> <span class="news-text">Co-developed <a href="https://nvlabs.github.io/SoL-Pi/" target="_blank" rel="noopener">SoL-Pi</a> with NVIDIA: ~35% lower agent-harness cost, now 3,600+ GitHub stars.</span></li>
+                <li><span class="news-year">2026.09</span> <span class="news-text">One paper accepted to NeurIPS 2026: <a href="https://arxiv.org/abs/2602.07891" target="_blank" rel="noopener">SAGE</a>.</span></li>
                 <li><span class="news-year">2026.06</span> <span class="news-text">Three papers accepted to ECCV 2026: <a href="https://arxiv.org/abs/2603.16099" target="_blank" rel="noopener">OneWorld</a>, <a href="https://arxiv.org/abs/2509.19297" target="_blank" rel="noopener">VolSplat</a>, and <a href="https://arxiv.org/abs/2512.02870" target="_blank" rel="noopener">Taming Camera-Controlled Video Generation</a>.</span></li>
-                <li><span class="news-year">2026.05</span> <span class="news-text">I joined NTU CCDS as a Nanyang Assistant Professor!</span></li>
-                <li><span class="news-year">2025.10</span> <span class="news-text">Awarded the Singapore NRF AI Fellowship to advance research on spatial intelligence.</span></li>
-                <li><span class="news-year">2025.04</span> <span class="news-text">Joined ByteDance Seed (USA) as a Research Scientist, working on foundation models.</span></li>
-            </ul>
-        </section>
-
-        <!-- Honors & Service Section -->
-        <section id="honors" class="section-news reveal">
-            <h2>Honors &amp; Service</h2>
-            <ul class="news-list news-list-wide">
-                <li><span class="news-year">2026 – 2031</span> <span class="news-text"><strong>NRF AI Fellowship</strong> (Principal Investigator), National Research Foundation, Singapore</span></li>
-                <li><span class="news-year">2026 – 2029</span> <span class="news-text"><strong>Nanyang Assistant Professorship</strong>, Nanyang Technological University</span></li>
-                <li><span class="news-year">2023</span> <span class="news-text"><strong>CVPR Highlight</strong> for NoPe-NeRF</span></li>
-                <li><span class="news-year">Open source</span> <span class="news-text">GMS is integrated into OpenCV; GMS, SC-Depth, and SoL-Pi have 5,000+ GitHub stars combined</span></li>
-                <li><span class="news-year">Reviewer</span> <span class="news-text">TPAMI, IJCV, TOG, TRO, TIP, TNNLS, TMM, RA-L; NeurIPS, ICLR, SIGGRAPH, CVPR, ICCV, ECCV, AAAI, ICRA, IROS</span></li>
+                <li><span class="news-year">2026.05</span> <span class="news-text">Joined NTU CCDS as a Nanyang Assistant Professor.</span></li>
             </ul>
         </section>
 
@@ -224,6 +193,18 @@
             <noscript>
                 <p>Please enable JavaScript to view the publication list.</p>
             </noscript>
+        </section>
+
+        <!-- Honors & Service Section -->
+        <section id="honors" class="section-news reveal">
+            <h2>Honors &amp; Service</h2>
+            <ul class="news-list news-list-wide">
+                <li><span class="news-year">2026 – 2031</span> <span class="news-text"><strong>NRF AI Fellowship</strong> (Principal Investigator), National Research Foundation, Singapore</span></li>
+                <li><span class="news-year">2026 – 2029</span> <span class="news-text"><strong>Nanyang Assistant Professorship</strong>, Nanyang Technological University</span></li>
+                <li><span class="news-year">2023</span> <span class="news-text"><strong>CVPR Highlight</strong> for NoPe-NeRF</span></li>
+                <li><span class="news-year">Open source</span> <span class="news-text">GMS is integrated into OpenCV</span></li>
+                <li><span class="news-year">Reviewer</span> <span class="news-text">TPAMI, IJCV, TOG, TRO, TIP, TNNLS, TMM, RA-L; NeurIPS, ICLR, SIGGRAPH, CVPR, ICCV, ECCV, AAAI, ICRA, IROS</span></li>
+            </ul>
         </section>
 
         <!-- Footer -->

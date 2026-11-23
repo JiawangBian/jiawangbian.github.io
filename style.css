@@ -293,9 +293,7 @@ a.nav-brand:hover {
 
 .about-info {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 216px;
-    gap: 36px;
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr);
 }
 
 .info-column {
@@ -464,7 +462,7 @@ a.nav-brand:hover {
 }
 
 .research-area {
-    padding: 20px 0 24px;
+    padding: 18px 0 20px;
     border-top: 1px solid var(--color-border);
 }
 
@@ -489,7 +487,7 @@ a.nav-brand:hover {
 }
 
 .research-area p.research-works {
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 13.5px;
 }
 
@@ -503,11 +501,12 @@ a.nav-brand:hover {
     text-underline-offset: 3px;
 }
 
-.research-more {
-    display: inline-block;
-    margin-top: 8px;
+.research-works a.research-more {
+    margin-left: 10px;
     font-family: var(--font-mono);
     font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
     color: var(--color-text-muted);
 }
 
@@ -556,6 +555,10 @@ a.nav-brand:hover {
 .news-text a:hover {
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+#honors {
+    margin: 64px 0 0;
 }
 
 .news-list-wide li {
