@@ -551,3 +551,15 @@ function fallbackCopy(text) {
     try { document.execCommand('copy'); } catch (e) {}
     document.body.removeChild(textarea);
 }
+
+// ============================================
+// Research areas: jump to the publication list filtered by topic
+// ============================================
+document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[data-topic]');
+    if (!link) return;
+    const select = document.querySelector('.pub-topic-filter');
+    if (!select) return;
+    select.value = link.dataset.topic;
+    select.dispatchEvent(new Event('change'));
+});
