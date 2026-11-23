@@ -105,9 +105,11 @@ function updateActiveNav() {
     });
 
     navLinks.forEach(link => {
-        link.style.fontWeight = '';
-        if (link.getAttribute('href') === `#${current}`) {
-            link.style.fontWeight = '600';
+        const href = link.getAttribute('href');
+        if (href.startsWith('#')) {
+            link.classList.toggle('active', href === `#${current}`);
+        } else if (href === 'index.html' && document.getElementById('home')) {
+            link.classList.toggle('active', current !== 'publications');
         }
     });
 }
@@ -333,13 +335,13 @@ function createPublicationElement(publication) {
             anchor.href = link.url;
             anchor.target = '_blank';
             anchor.rel = 'noopener';
-            anchor.textContent = `[${link.label}]`;
+            anchor.textContent = link.label;
             linksContainer.appendChild(anchor);
         });
         // Add inline BibTeX toggle link
         const bibToggle = document.createElement('a');
         bibToggle.href = '#';
-        bibToggle.textContent = '[BibTeX]';
+        bibToggle.textContent = 'BibTeX';
         bibToggle.addEventListener('click', (e) => {
             e.preventDefault();
             bibBox.style.display = (bibBox.style.display === 'block') ? 'none' : 'block';
@@ -352,7 +354,7 @@ function createPublicationElement(publication) {
     if (publication.summary) {
         const summary = document.createElement('p');
         summary.className = 'pub-summary';
-        summary.innerHTML = `<span class=\"pub-summary-label\">TLDR:</span> ${renderInlineMarkdown(publication.summary)}`;
+        summary.innerHTML = `<span class=\"pub-summary-label\">TLDR</span> ${renderInlineMarkdown(publication.summary)}`;
         content.appendChild(summary);
     }
 
@@ -368,7 +370,8 @@ function createPublicationElement(publication) {
     pre.style.border = '1px solid var(--color-border-code)';
     pre.style.color = 'var(--color-text-secondary)';
     pre.style.borderRadius = 'var(--radius-md)';
-    pre.style.fontSize = '13px';
+    pre.style.fontSize = '12.5px';
+    pre.style.fontFamily = 'var(--font-mono)';
     pre.textContent = generateBibtex(publication);
 
     const copyLink = document.createElement('a');
@@ -376,7 +379,7 @@ function createPublicationElement(publication) {
     copyLink.style.display = 'inline-block';
     copyLink.style.marginTop = '8px';
     copyLink.style.fontSize = '14px';
-    copyLink.textContent = '[Copy BibTeX]';
+    copyLink.textContent = 'Copy BibTeX';
     copyLink.addEventListener('click', (e) => {
         e.preventDefault();
         copyTextToClipboard(pre.textContent);

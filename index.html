@@ -7,7 +7,10 @@
     <meta name="description" content="Jiawang Bian - Nanyang Assistant Professor at NTU College of Computing and Data Science">
     <meta name="keywords" content="Jiawang Bian, Computer Vision, Machine Learning, Research, NTU, Spatial Intelligence">
     <title>Jiawang Bian</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400..600&display=swap">
+    <link rel="stylesheet" href="style.css?v=20261123">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css">
@@ -56,10 +59,10 @@
     <!-- Top Navigation -->
     <nav class="top-nav">
         <div class="container">
-            <div class="nav-brand">Jiawang Bian</div>
+            <a class="nav-brand" href="index.html">Jiawang Bian</a>
             <div class="nav-right">
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="#publications">Publications</a></li>
                     <li><a href="group.html">Group</a></li>
                     <li><a href="teaching.html">Teaching</a></li>
@@ -100,20 +103,18 @@
                                 title="ORCID"><i class="ai ai-orcid"></i></a>
                             <a href="https://www.semanticscholar.org/author/Jiawang-Bian/3459992" target="_blank"
                                 rel="noopener" title="Semantic Scholar"><i class="ai ai-semantic-scholar"></i></a>
-                            <a href="cv-bjw.pdf" target="_blank" rel="noopener" title="Curriculum Vitae"
-                                style="margin-left: 10px; font-size: 16px; border: 1px solid var(--color-border); padding: 5px 12px; border-radius: var(--radius-md); text-decoration: none; display: flex; align-items: center; gap: 6px;"><i
-                                    class="fas fa-file-pdf"></i> CV</a>
+                            <a class="cv-link" href="cv-bjw.pdf" target="_blank" rel="noopener" title="Curriculum Vitae"><i class="fas fa-file-pdf"></i> CV</a>
                         </div>
                     </div>
 
                     <!-- Right column: Research Interests -->
                     <div class="info-column">
-                        <h3>Research Interests:</h3>
+                        <h3>Research interests</h3>
                         <ul class="interests-list">
                             <li>3D/4D Reconstruction</li>
                             <li>Generative AI</li>
                             <li>World Models</li>
-                            <li>VLMs & VLAs</li>
+                            <li>VLMs &amp; VLAs</li>
                         </ul>
                     </div>
                 </div>
@@ -140,14 +141,14 @@
                 </p>
 
                 <div class="recruitment">
+                    <p class="eyebrow">Openings</p>
                     <p>
                         I lead the <strong>Spatial Intelligence Lab</strong> at NTU and am looking for self-motivated <span class="highlight-red">PhD students, Postdocs, RAs, and Visiting Students</span> to join my group. Feel free to email me your CV.
                     </p>
-                    <p style="font-size: 14px; margin-top: 10px; color: var(--color-text-secondary); line-height: 1.5;">
-                        <em>Note: Due to the high volume of applications, a response is not guaranteed. Minimum
-                            requirements include <span class="highlight-red"
-                                style="color: var(--color-accent-red) !important;">at least one first-author paper in a
-                                top-tier conference, highly relevant to our lab vision</span>.</em>
+                    <p class="recruitment-note">
+                        Note: Due to the high volume of applications, a response is not guaranteed. Minimum
+                        requirements include <span class="highlight-red">at least one first-author paper in a
+                            top-tier conference, highly relevant to our lab vision</span>.
                     </p>
                 </div>
             </div>
@@ -157,13 +158,13 @@
         <section id="news" class="section-news reveal">
             <h2>News</h2>
             <ul class="news-list">
-                <li><span class="news-year">[2026.09]</span> <span class="news-text">Co-developed <a href="https://nvlabs.github.io/Sana/Sol-Refiner/" target="_blank" rel="noopener">SoL-Refiner</a> with NVIDIA, a one-step 4K video refiner; our <a href="https://nvlabs.github.io/Sana/Open-H3-Regenerate-2K/" target="_blank" rel="noopener">Open-H3-Regenerate-2K</a> is integrated as its MiniMax H3 refiner, preferred over the official H3 2K API in 87% of user judgments.</span></li>
-                <li><span class="news-year">[2026.09]</span> <span class="news-text">Co-developed <a href="https://nvlabs.github.io/SoL-Pi/" target="_blank" rel="noopener">SoL-Pi</a> with NVIDIA — cuts agent-harness cost by ~35% at 94% of baseline performance, now 3,600+ GitHub stars.</span></li>
-                <li><span class="news-year">[2026.06]</span> <span class="news-text">Three papers accepted to ECCV 2026: <a href="https://arxiv.org/abs/2603.16099" target="_blank" rel="noopener">OneWorld</a>, <a href="https://arxiv.org/abs/2509.19297" target="_blank" rel="noopener">VolSplat</a>, and <a href="https://arxiv.org/abs/2512.02870" target="_blank" rel="noopener">Taming Camera-Controlled Video Generation</a>.</span></li>
-                <li><span class="news-year">[2026.05]</span> <span class="news-text">I joined NTU CCDS as a Nanyang Assistant Professor!</span></li>
-                <li><span class="news-year">[2025.12]</span> <span class="news-text">Awarded the Nanyang Assistant Professorship at NTU.</span></li>
-                <li><span class="news-year">[2025.10]</span> <span class="news-text">Awarded the Singapore NRF AI Fellowship to advance research on spatial intelligence.</span></li>
-                <li><span class="news-year">[2025.04]</span> <span class="news-text">Joined ByteDance Seed (USA) as a Research Scientist, working on foundation models.</span></li>
+                <li><span class="news-year">2026.09</span> <span class="news-text">Co-developed <a href="https://nvlabs.github.io/Sana/Sol-Refiner/" target="_blank" rel="noopener">SoL-Refiner</a> with NVIDIA, a one-step 4K video refiner; our <a href="https://nvlabs.github.io/Sana/Open-H3-Regenerate-2K/" target="_blank" rel="noopener">Open-H3-Regenerate-2K</a> is integrated as its MiniMax H3 refiner, preferred over the official H3 2K API in 87% of user judgments.</span></li>
+                <li><span class="news-year">2026.09</span> <span class="news-text">Co-developed <a href="https://nvlabs.github.io/SoL-Pi/" target="_blank" rel="noopener">SoL-Pi</a> with NVIDIA — cuts agent-harness cost by ~35% at 94% of baseline performance, now 3,600+ GitHub stars.</span></li>
+                <li><span class="news-year">2026.06</span> <span class="news-text">Three papers accepted to ECCV 2026: <a href="https://arxiv.org/abs/2603.16099" target="_blank" rel="noopener">OneWorld</a>, <a href="https://arxiv.org/abs/2509.19297" target="_blank" rel="noopener">VolSplat</a>, and <a href="https://arxiv.org/abs/2512.02870" target="_blank" rel="noopener">Taming Camera-Controlled Video Generation</a>.</span></li>
+                <li><span class="news-year">2026.05</span> <span class="news-text">I joined NTU CCDS as a Nanyang Assistant Professor!</span></li>
+                <li><span class="news-year">2025.12</span> <span class="news-text">Awarded the Nanyang Assistant Professorship at NTU.</span></li>
+                <li><span class="news-year">2025.10</span> <span class="news-text">Awarded the Singapore NRF AI Fellowship to advance research on spatial intelligence.</span></li>
+                <li><span class="news-year">2025.04</span> <span class="news-text">Joined ByteDance Seed (USA) as a Research Scientist, working on foundation models.</span></li>
             </ul>
         </section>
 
@@ -185,7 +186,7 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20261123"></script>
 </body>
 
 </html>
