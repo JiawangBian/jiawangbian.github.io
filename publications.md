@@ -88,16 +88,6 @@
 
 ---
 
-### RoboPearls: Editable Video Simulation for Robot Manipulation
-![RoboPearls](assets/images/publications/robopearls.png)
-
-- Authors: T. Tang, L. Zhang, Y. Wen, K. Zhang, **J.-W. Bian**, T. Yan, K. Zhan, P. Jia, H. Wu, L. Lin, X. Liang
-- Venue: International Conference on Computer Vision (ICCV), 2025
-- Links: [Project](https://tangtaogo.github.io/RoboPearls/) | [arXiv](https://arxiv.org/abs/2506.22756) | [Scholar](https://scholar.google.com/scholar?q=RoboPearls%3A+Editable+Video+Simulation+for+Robot+Manipulation)
-- TLDR: Packages raw tele-operated videos into editable "pearls" that can be relabelled, simulated, and reused to train or retarget robot manipulation policies without recollecting data.
-
----
-
 ### Manydepth2: Motion-aware Self-supervised Monocular Depth Estimation in Dynamic Scenes
 ![Manydepth2](assets/images/publications/manydepth2.png)
 
